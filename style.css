@@ -1,0 +1,483 @@
+/* =========================================================
+   FOREST HOLDING A.E. — Φύλλο στυλ
+   Παλέτα: σκούρο πράσινο / γκρι, με διακριτικό λαδί-χρυσό τόνο.
+   ========================================================= */
+
+/* ----- 1. Μεταβλητές χρωμάτων & ρυθμίσεων (Custom Properties) ----- */
+:root {
+  --green-900: #0f1a14;   /* βαθύ πράσινο — φόντο footer/hero */
+  --green-800: #16241c;   /* σκούρο πράσινο */
+  --green-700: #1e3327;   /* πράσινο ενοτήτων */
+  --green-600: #2b4635;
+  --sage:      #9db29f;    /* απαλό φασκόμηλο για δευτερεύον κείμενο */
+  --gold:      #c2a878;    /* διακριτικός λαδί-χρυσός τόνος (accent) */
+
+  --grey-50:   #f5f6f4;   /* σχεδόν λευκό φόντο ανοιχτών ενοτήτων */
+  --grey-100:  #e8ebe7;
+  --grey-300:  #c3c9c3;
+  --grey-600:  #565f58;   /* γκρι κείμενο σε ανοιχτό φόντο */
+  --grey-900:  #1c211e;   /* σχεδόν μαύρο κείμενο */
+
+  --maxw: 1120px;          /* μέγιστο πλάτος περιεχομένου */
+  --radius: 4px;
+  --transition: 0.25s ease;
+
+  --font: "Georgia", "Times New Roman", serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* ----- 2. Reset & βασικά ----- */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }        /* ομαλή κύλιση στα #links (fallback του JS) */
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--grey-900);
+  background: var(--grey-50);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 { font-family: var(--font); font-weight: 600; line-height: 1.2; }
+
+a { color: inherit; text-decoration: none; }
+
+img { max-width: 100%; display: block; }
+
+.container {
+  width: 100%;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ----- 3. Κεφαλίδα / Πλοήγηση ----- */
+.site-header {
+  position: sticky;               /* «κολλάει» στην κορυφή κατά την κύλιση */
+  top: 0;
+  z-index: 100;
+  background: #0f1e0f;             /* ίδιο πράσινο με το φόντο του logo, ώστε να «λιώνει» */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  height: 92px;
+}
+
+.brand { display: flex; align-items: center; gap: 14px; color: #fff; margin-right: auto; }
+
+/* Λογότυπο: εικόνα δέντρου + ζωντανό κείμενο (ώστε τα γράμματα να ρυθμίζονται ανεξάρτητα) */
+.brand-tree { height: 62px; width: auto; display: block; }
+.brand-word { display: flex; flex-direction: column; line-height: 1; }
+.brand-title {
+  color: #d0ecd0;                 /* ίδιο mint με το πρωτότυπο logo */
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 1.75rem;
+  letter-spacing: 5px;
+}
+.brand-sub {
+  color: #4a9a50;                 /* ίδιο πράσινο με το δέντρο */
+  font-size: 0.72rem;
+  letter-spacing: 7px;
+  margin-top: 7px;
+}
+
+.header-right { display: flex; align-items: center; gap: 18px; }
+
+/* Διακόπτης γλώσσας */
+.lang-toggle {
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: var(--grey-100);
+  font-size: 0.78rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.lang-toggle:hover { border-color: var(--gold); color: var(--gold); }
+
+.brand-mark {
+  width: 14px; height: 14px;
+  border: 2px solid var(--gold);
+  transform: rotate(45deg);        /* μικρό ρόμβος-λογότυπο */
+}
+
+.brand-name { font-family: var(--font); font-size: 1.15rem; letter-spacing: 2px; }
+.brand-thin { color: var(--sage); font-weight: 400; }
+
+.site-nav ul {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+  margin: 0; padding: 0;
+}
+
+.site-nav a {
+  color: var(--grey-100);
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  padding: 6px 0;
+  position: relative;
+  transition: color var(--transition);
+}
+
+/* Υπογράμμιση που «μεγαλώνει» στο hover */
+.site-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0; bottom: 0;
+  width: 0; height: 1px;
+  background: var(--gold);
+  transition: width var(--transition);
+}
+.site-nav a:hover { color: #fff; }
+.site-nav a:hover::after { width: 100%; }
+
+/* Ενεργός σύνδεσμος (ενημερώνεται από το JavaScript κατά την κύλιση) */
+.site-nav a.is-active { color: #fff; }
+.site-nav a.is-active::after { width: 100%; }
+
+/* Κουμπί hamburger — κρυφό σε desktop */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  padding: 6px;
+}
+.nav-toggle span {
+  width: 24px; height: 2px;
+  background: #fff;
+  transition: var(--transition);
+}
+
+/* ----- 4. Κουμπιά ----- */
+.btn {
+  display: inline-block;
+  padding: 13px 26px;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  border-radius: var(--radius);
+  transition: all var(--transition);
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+.btn-primary { background: var(--gold); color: var(--green-900); font-weight: 600; }
+.btn-primary:hover { background: #d4bd90; transform: translateY(-2px); }
+
+.btn-ghost { border-color: rgba(255, 255, 255, 0.3); color: #fff; }
+.btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+
+/* ----- 5. Hero (Αρχική) ----- */
+.hero {
+  background:
+    linear-gradient(160deg, var(--green-900) 0%, var(--green-700) 100%);
+  color: #fff;
+  padding: 120px 0 130px;
+  position: relative;
+  overflow: hidden;
+}
+/* Διακριτικό γεωμετρικό μοτίβο στο φόντο */
+.hero::after {
+  content: "";
+  position: absolute;
+  right: -120px; top: -120px;
+  width: 420px; height: 420px;
+  border: 1px solid rgba(194, 168, 120, 0.18);
+  border-radius: 50%;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  right: -40px; bottom: -160px;
+  width: 320px; height: 320px;
+  border: 1px solid rgba(194, 168, 120, 0.12);
+  border-radius: 50%;
+}
+.hero-inner { position: relative; z-index: 1; max-width: 720px; }
+
+.eyebrow {
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.78rem;
+  margin: 0 0 20px;
+}
+.hero h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); margin: 0 0 24px; }
+.lead { font-size: 1.15rem; color: var(--grey-100); max-width: 620px; margin: 0 0 36px; }
+.hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+
+/* ----- 6. Γενικές ενότητες ----- */
+.section { padding: 96px 0; }
+.section-alt { background: var(--grey-100); }
+
+.section-label {
+  color: var(--gold);
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0 0 18px;
+}
+.section h2 { font-size: clamp(1.8rem, 3.5vw, 2.6rem); margin: 0 0 20px; color: var(--grey-900); }
+.section-intro { color: var(--grey-600); max-width: 620px; font-size: 1.08rem; margin: 0 0 48px; }
+
+/* ----- 7. Σχετικά με εμάς ----- */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 56px;
+}
+.about-grid h2 { position: sticky; top: 100px; }
+.about-text p { color: var(--grey-600); margin: 0 0 20px; }
+
+.value-list {
+  list-style: none;
+  margin: 40px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 28px;
+}
+.value-list li { border-left: 2px solid var(--gold); padding-left: 20px; }
+.value-list h3 { margin: 0 0 6px; font-size: 1.15rem; color: var(--green-700); }
+.value-list p { margin: 0; color: var(--grey-600); font-size: 0.98rem; }
+
+/* ----- 8. Συμμετοχές (Κάρτες) ----- */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.card {
+  background: #fff;
+  border: 1px solid var(--grey-300);
+  border-radius: var(--radius);
+  padding: 32px 28px;
+  transition: all var(--transition);
+}
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold);
+  box-shadow: 0 12px 30px rgba(15, 26, 20, 0.08);
+}
+.card-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+.card h3 { margin: 0 0 10px; font-size: 1.3rem; color: var(--green-700); }
+.card p { margin: 0; color: var(--grey-600); font-size: 0.96rem; }
+.card-more {
+  display: inline-block;
+  margin-top: 18px;
+  color: var(--gold);
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  transition: transform var(--transition);
+}
+.card:hover .card-more { transform: translateX(4px); }
+
+/* ----- 8b. Σελίδες εταιρειών (υποσελίδες) ----- */
+.subhero {
+  background: linear-gradient(160deg, var(--green-900) 0%, var(--green-700) 100%);
+  color: #fff;
+  padding: 130px 0 70px;
+}
+.subhero h1 { font-size: clamp(2rem, 4.5vw, 3.2rem); margin: 0 0 16px; }
+.subhero .lead { margin: 0; }
+
+/* Επικεφαλίδα εταιρείας με έμβλημα */
+.subhero-inner { display: flex; align-items: center; gap: 28px; }
+.company-emblem {
+  flex-shrink: 0;
+  width: 92px;
+  height: 92px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font);
+  font-size: 1.9rem;
+  letter-spacing: 1px;
+  color: var(--gold);
+  border: 1px solid rgba(194, 168, 120, 0.55);
+  border-radius: 50%;
+}
+
+.back-link {
+  display: inline-block;
+  color: var(--sage);
+  font-size: 0.88rem;
+  letter-spacing: 0.5px;
+  margin-bottom: 28px;
+  transition: color var(--transition);
+}
+.back-link:hover { color: var(--gold); }
+
+.company-layout {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 56px;
+  align-items: start;
+}
+.company-about p { color: var(--grey-600); margin: 0 0 20px; font-size: 1.08rem; }
+
+.company-info {
+  background: var(--grey-100);
+  border: 1px solid var(--grey-300);
+  border-radius: var(--radius);
+  padding: 32px 28px;
+  position: sticky;
+  top: 100px;
+}
+.info-list {
+  list-style: none;
+  margin: 20px 0 28px;
+  padding: 0;
+  display: grid;
+  gap: 18px;
+}
+.info-list li { display: flex; flex-direction: column; gap: 4px; }
+.info-list span:first-child {
+  color: var(--gold);
+  font-size: 0.75rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+.info-list a { color: var(--green-700); transition: color var(--transition); word-break: break-word; }
+.info-list a:hover { color: var(--gold); }
+.company-info .btn { width: 100%; text-align: center; }
+
+/* Στιγμιότυπο (screenshot) ιστοσελίδας */
+.preview-wrap { padding-bottom: 0; }
+.site-preview { margin: 0; }
+.site-preview img {
+  width: 100%;
+  border: 1px solid var(--grey-300);
+  border-radius: var(--radius);
+  box-shadow: 0 18px 40px rgba(15, 26, 20, 0.12);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.site-preview a:hover img {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 50px rgba(15, 26, 20, 0.18);
+}
+.site-preview figcaption {
+  margin-top: 14px;
+  text-align: center;
+  color: var(--grey-600);
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+
+/* ----- 9. Επικοινωνία ----- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+.contact-info {
+  list-style: none;
+  margin: 36px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 20px;
+}
+.contact-info li { display: flex; flex-direction: column; color: var(--grey-900); }
+.contact-info span:first-child {
+  color: var(--gold);
+  font-size: 0.78rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.contact-form { display: grid; gap: 20px; }
+.field { display: grid; gap: 8px; }
+.field label { font-size: 0.85rem; letter-spacing: 0.5px; color: var(--grey-600); }
+.field input,
+.field textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 13px 15px;
+  border: 1px solid var(--grey-300);
+  border-radius: var(--radius);
+  background: #fff;
+  color: var(--grey-900);
+  transition: border-color var(--transition);
+  resize: vertical;
+}
+.field input:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+.contact-form .btn { justify-self: start; }
+.form-note { color: var(--green-700); font-weight: 600; margin: 4px 0 0; }
+
+/* ----- 10. Υποσέλιδο ----- */
+.site-footer {
+  background: var(--green-900);
+  color: var(--grey-300);
+  padding: 40px 0;
+}
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.footer-inner .brand-name { color: #fff; }
+.footer-inner p { margin: 0; font-size: 0.88rem; }
+
+/* ----- 11. Responsive (κινητά & tablet) ----- */
+@media (max-width: 860px) {
+  .about-grid,
+  .contact-grid,
+  .company-layout { grid-template-columns: 1fr; gap: 32px; }
+  .about-grid h2 { position: static; }
+  .company-info { position: static; }
+  .cards { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  /* Το μενού γίνεται κατακόρυφο πτυσσόμενο */
+  .nav-toggle { display: flex; }
+  .site-nav {
+    position: absolute;
+    top: 92px; left: 0; right: 0;
+    background: var(--green-900);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  .site-nav.open { max-height: 320px; }
+  .site-nav ul { flex-direction: column; gap: 0; padding: 8px 24px 20px; }
+  .site-nav li { border-bottom: 1px solid rgba(255, 255, 255, 0.06); }
+  .site-nav a { display: block; padding: 14px 0; }
+
+  .cards { grid-template-columns: 1fr; }
+  .section { padding: 64px 0; }
+  .hero { padding: 90px 0; }
+
+  .subhero-inner { flex-direction: column; align-items: flex-start; gap: 20px; }
+  .company-emblem { width: 72px; height: 72px; font-size: 1.5rem; }
+  .brand-tree { height: 48px; }
+  .brand-title { font-size: 1.25rem; letter-spacing: 3px; }
+  .brand-sub { font-size: 0.62rem; letter-spacing: 4px; margin-top: 5px; }
+}

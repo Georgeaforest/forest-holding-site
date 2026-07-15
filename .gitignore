@@ -1,0 +1,10 @@
+# macOS
+.DS_Store
+
+# Επεξεργαστές / IDE
+.vscode/
+.idea/
+
+# Προσωρινά αρχεία
+*.log
+*.tmp
