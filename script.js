@@ -12,7 +12,7 @@ var translations = {
     "nav.holdings": "Συμμετοχές",
     "nav.contact": "Επικοινωνία",
 
-    "hero.eyebrow": "Εταιρεία Συμμετοχών · Est. 1998",
+    "hero.eyebrow": "Εταιρεία Συμμετοχών · Est. 2021",
     "hero.title": "Σταθερή ανάπτυξη,<br>με ρίζες στη διάρκεια.",
     "hero.lead": "Η FOREST HOLDING A.E. επενδύει και υποστηρίζει εταιρείες με στέρεα θεμέλια και μακροπρόθεσμη προοπτική, δημιουργώντας αξία μέσα από υπεύθυνη διαχείριση και στρατηγική συνέπεια.",
     "hero.cta1": "Οι συμμετοχές μας",
@@ -70,9 +70,6 @@ var translations = {
     "contact.label": "03 — Επικοινωνία",
     "contact.title": "Ας μιλήσουμε.",
     "contact.intro": "Για ερωτήματα σχετικά με τον όμιλο, τις συμμετοχές ή συνεργασίες, επικοινωνήστε μαζί μας.",
-    "contact.addrLabel": "Διεύθυνση",
-    "contact.addr": "Λεωφ. Κηφισίας 000, 151 25, Αθήνα",
-    "contact.phoneLabel": "Τηλέφωνο",
 
     "form.name": "Ονοματεπώνυμο",
     "form.namePh": "Το όνομά σας",
@@ -80,7 +77,8 @@ var translations = {
     "form.message": "Μήνυμα",
     "form.messagePh": "Το μήνυμά σας…",
     "form.submit": "Αποστολή",
-    "form.note": "Ευχαριστούμε! Το μήνυμά σας καταχωρήθηκε (demo).",
+    "form.note": "Ευχαριστούμε! Το μήνυμά σας εστάλη.",
+    "form.error": "Κάτι πήγε στραβά. Δοκιμάστε ξανά αργότερα.",
 
     "footer.rights": "Με επιφύλαξη κάθε δικαιώματος."
   },
@@ -90,7 +88,7 @@ var translations = {
     "nav.holdings": "Holdings",
     "nav.contact": "Contact",
 
-    "hero.eyebrow": "Holding Company · Est. 1998",
+    "hero.eyebrow": "Holding Company · Est. 2021",
     "hero.title": "Steady growth,<br>rooted in endurance.",
     "hero.lead": "FOREST HOLDING S.A. invests in and supports companies with solid foundations and a long-term outlook, creating value through responsible management and strategic consistency.",
     "hero.cta1": "Our holdings",
@@ -148,9 +146,6 @@ var translations = {
     "contact.label": "03 — Contact",
     "contact.title": "Let's talk.",
     "contact.intro": "For enquiries about the group, our holdings or partnerships, get in touch with us.",
-    "contact.addrLabel": "Address",
-    "contact.addr": "000 Kifisias Ave., 151 25, Athens, Greece",
-    "contact.phoneLabel": "Phone",
 
     "form.name": "Full name",
     "form.namePh": "Your name",
@@ -158,7 +153,8 @@ var translations = {
     "form.message": "Message",
     "form.messagePh": "Your message…",
     "form.submit": "Send",
-    "form.note": "Thank you! Your message has been recorded (demo).",
+    "form.note": "Thank you! Your message has been sent.",
+    "form.error": "Something went wrong. Please try again later.",
 
     "footer.rights": "All rights reserved."
   }
@@ -252,7 +248,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  /* ----- 5. Φόρμα επικοινωνίας (demo — δεν στέλνει δεδομένα) ----- */
+  /* ----- 5. Φόρμα επικοινωνίας — αποστολή μέσω Web3Forms ----- */
   var form = document.querySelector(".contact-form");
   if (form) {
     form.addEventListener("submit", function (e) {
@@ -263,9 +259,35 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
       }
 
-      var note = form.querySelector(".form-note");
-      if (note) note.hidden = false;
-      form.reset();
+      var note = form.querySelector(".form-note");     // μήνυμα επιτυχίας
+      var errNote = form.querySelector(".form-error");  // μήνυμα σφάλματος
+      var btn = form.querySelector('button[type="submit"]');
+
+      // Κρύψε προηγούμενα μηνύματα και «κλείδωσε» το κουμπί όσο στέλνει.
+      if (note) note.hidden = true;
+      if (errNote) errNote.hidden = true;
+      if (btn) btn.disabled = true;
+
+      // Στέλνουμε τα πεδία της φόρμας στο Web3Forms (POST).
+      fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: new FormData(form)
+      })
+        .then(function (r) { return r.json(); })
+        .then(function (res) {
+          if (btn) btn.disabled = false;
+          if (res.success) {
+            if (note) note.hidden = false;   // επιτυχία
+            form.reset();
+          } else {
+            if (errNote) errNote.hidden = false;  // η υπηρεσία απάντησε με σφάλμα
+          }
+        })
+        .catch(function () {
+          // Αποτυχία δικτύου
+          if (btn) btn.disabled = false;
+          if (errNote) errNote.hidden = false;
+        });
     });
   }
 

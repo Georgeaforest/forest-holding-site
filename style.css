@@ -427,6 +427,7 @@ img { max-width: 100%; display: block; }
 }
 .contact-form .btn { justify-self: start; }
 .form-note { color: var(--green-700); font-weight: 600; margin: 4px 0 0; }
+.form-error { color: #b23b3b; font-weight: 600; margin: 4px 0 0; }
 
 /* ----- 10. Υποσέλιδο ----- */
 .site-footer {

@@ -46,7 +46,7 @@
     <!-- ===== ΑΡΧΙΚΗ (HERO) ===== -->
     <section class="hero" id="hero">
       <div class="container hero-inner">
-        <p class="eyebrow" data-i18n="hero.eyebrow">Εταιρεία Συμμετοχών · Est. 1998</p>
+        <p class="eyebrow" data-i18n="hero.eyebrow">Εταιρεία Συμμετοχών · Est. 2021</p>
         <h1 data-i18n="hero.title">Σταθερή ανάπτυξη,<br>με ρίζες στη διάρκεια.</h1>
         <p class="lead" data-i18n="hero.lead">
           Η FOREST HOLDING A.E. επενδύει και υποστηρίζει εταιρείες με στέρεα
@@ -153,15 +153,17 @@
             επικοινωνήστε μαζί μας.
           </p>
 
-          <ul class="contact-info">
-            <li><span data-i18n="contact.addrLabel">Διεύθυνση</span><span data-i18n="contact.addr">Λεωφ. Κηφισίας 000, 151 25, Αθήνα</span></li>
-            <li><span data-i18n="contact.phoneLabel">Τηλέφωνο</span><span>+30 210 000 0000</span></li>
-            <li><span>Email</span><span>info@forestholding.gr</span></li>
-          </ul>
         </div>
 
-        <!-- Φόρμα επικοινωνίας (placeholder, δεν αποστέλλει δεδομένα) -->
+        <!-- Φόρμα επικοινωνίας — αποστολή μέσω Web3Forms (στέλνει στο info@forestholding.gr) -->
         <form class="contact-form" novalidate>
+          <!-- ΑΝΤΙΚΑΤΕΣΤΗΣΕ με το δικό σου access key από https://web3forms.com (δωρεάν) -->
+          <input type="hidden" name="access_key" value="2d1455b8-f04c-4919-a3ee-ed4a234013b3">
+          <input type="hidden" name="subject" value="Νέο μήνυμα από το forestholding.gr">
+          <input type="hidden" name="from_name" value="FOREST HOLDING — Ιστοσελίδα">
+          <!-- Honeypot κατά των bots: αν συμπληρωθεί, το μήνυμα απορρίπτεται -->
+          <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+
           <div class="field">
             <label for="name" data-i18n="form.name">Ονοματεπώνυμο</label>
             <input type="text" id="name" name="name" data-i18n-placeholder="form.namePh" placeholder="Το όνομά σας" required>
@@ -175,7 +177,8 @@
             <textarea id="message" name="message" rows="4" data-i18n-placeholder="form.messagePh" placeholder="Το μήνυμά σας…" required></textarea>
           </div>
           <button type="submit" class="btn btn-primary" data-i18n="form.submit">Αποστολή</button>
-          <p class="form-note" data-i18n="form.note" hidden>Ευχαριστούμε! Το μήνυμά σας καταχωρήθηκε (demo).</p>
+          <p class="form-note" data-i18n="form.note" hidden>Ευχαριστούμε! Το μήνυμά σας εστάλη.</p>
+          <p class="form-error" data-i18n="form.error" hidden>Κάτι πήγε στραβά. Δοκιμάστε ξανά αργότερα.</p>
         </form>
       </div>
     </section>
