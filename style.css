@@ -433,6 +433,23 @@ img { max-width: 100%; display: block; }
 }
 .footer-inner .brand-name { color: #fff; }
 .footer-inner p { margin: 0; font-size: 0.88rem; }
+.footer-meta { text-align: right; }
+.footer-meta p + p { margin-top: 6px; }
+.footer-legal { color: var(--sage); font-size: 0.78rem; }
+.footer-inner a { color: var(--gold); text-decoration: none; }
+.footer-inner a:hover { text-decoration: underline; }
+
+/* Σημείωση συγκατάθεσης κάτω από τη φόρμα */
+.form-consent { margin-top: 14px; font-size: 0.8rem; color: var(--grey-600); line-height: 1.5; }
+.form-consent a { color: var(--green-700); text-decoration: underline; }
+
+/* Σελίδα νομικού περιεχομένου (Πολιτική Απορρήτου) */
+.legal { max-width: 760px; }
+.legal h1 { margin: 0 0 6px; }
+.legal h2 { margin: 34px 0 10px; font-size: 1.2rem; color: var(--green-700); }
+.legal p, .legal li { color: var(--grey-600); }
+.legal ul { padding-left: 20px; }
+.legal .muted { font-size: 0.85rem; }
 
 /* ----- 11. Responsive (κινητά & tablet) ----- */
 @media (max-width: 860px) {
@@ -475,4 +492,6 @@ img { max-width: 100%; display: block; }
   .header-inner { height: 92px; }
   .brand-logo { height: 60px; }
   .site-nav { top: 92px; }
+
+  .footer-meta { text-align: left; }
 }

@@ -80,4 +80,20 @@
     <lastmod>2026-07-16</lastmod>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://forestholding.gr/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://forestholding.gr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://forestholding.gr/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://forestholding.gr/privacy.html"/>
+    <lastmod>2026-07-16</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://forestholding.gr/en/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://forestholding.gr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://forestholding.gr/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://forestholding.gr/privacy.html"/>
+    <lastmod>2026-07-16</lastmod>
+    <priority>0.3</priority>
+  </url>
 </urlset>
