@@ -78,15 +78,18 @@ img { max-width: 100%; display: block; }
 
 /* Διακόπτης γλώσσας */
 .lang-toggle {
+  display: inline-block;
   background: none;
   border: 1px solid rgba(255, 255, 255, 0.25);
   color: var(--grey-100);
   font-size: 0.78rem;
   letter-spacing: 1px;
   font-weight: 600;
+  line-height: 1;
   padding: 6px 12px;
   border-radius: var(--radius);
   cursor: pointer;
+  text-decoration: none;
   transition: all var(--transition);
 }
 .lang-toggle:hover { border-color: var(--gold); color: var(--gold); }

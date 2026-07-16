@@ -1,27 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://forestholding.gr/</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://forestholding.gr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://forestholding.gr/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://forestholding.gr/"/>
+    <lastmod>2026-07-16</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://forestholding.gr/en/</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://forestholding.gr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://forestholding.gr/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://forestholding.gr/"/>
     <lastmod>2026-07-16</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://forestholding.gr/house-of-wine.html</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://forestholding.gr/house-of-wine.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://forestholding.gr/en/house-of-wine.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://forestholding.gr/house-of-wine.html"/>
+    <lastmod>2026-07-16</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://forestholding.gr/en/house-of-wine.html</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://forestholding.gr/house-of-wine.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://forestholding.gr/en/house-of-wine.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://forestholding.gr/house-of-wine.html"/>
     <lastmod>2026-07-16</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://forestholding.gr/gaia-wines.html</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://forestholding.gr/gaia-wines.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://forestholding.gr/en/gaia-wines.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://forestholding.gr/gaia-wines.html"/>
+    <lastmod>2026-07-16</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://forestholding.gr/en/gaia-wines.html</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://forestholding.gr/gaia-wines.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://forestholding.gr/en/gaia-wines.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://forestholding.gr/gaia-wines.html"/>
     <lastmod>2026-07-16</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://forestholding.gr/loukoumades-aigaion.html</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://forestholding.gr/loukoumades-aigaion.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://forestholding.gr/en/loukoumades-aigaion.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://forestholding.gr/loukoumades-aigaion.html"/>
+    <lastmod>2026-07-16</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://forestholding.gr/en/loukoumades-aigaion.html</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://forestholding.gr/loukoumades-aigaion.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://forestholding.gr/en/loukoumades-aigaion.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://forestholding.gr/loukoumades-aigaion.html"/>
     <lastmod>2026-07-16</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://forestholding.gr/cimolus.html</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://forestholding.gr/cimolus.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://forestholding.gr/en/cimolus.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://forestholding.gr/cimolus.html"/>
+    <lastmod>2026-07-16</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://forestholding.gr/en/cimolus.html</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://forestholding.gr/cimolus.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://forestholding.gr/en/cimolus.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://forestholding.gr/cimolus.html"/>
     <lastmod>2026-07-16</lastmod>
     <priority>0.8</priority>
   </url>
