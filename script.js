@@ -14,7 +14,7 @@ var translations = {
 
     "hero.eyebrow": "Εταιρεία Συμμετοχών · Est. 2021",
     "hero.title": "Επενδύουμε στην ανάπτυξη<br>και τον εκσυγχρονισμό των επιχειρήσεων.",
-    "hero.lead": "Η FOREST HOLDING A.E. επενδύει και υποστηρίζει εταιρείες με στέρεα θεμέλια και μακροπρόθεσμη προοπτική, δημιουργώντας αξία μέσα από υπεύθυνη διαχείριση και στρατηγική συνέπεια.",
+    "hero.lead": "Η FOREST HOLDING A.E. επενδύει σε υγιείς επιχειρήσεις και στηρίζει ενεργά την ανάπτυξη και τον εκσυγχρονισμό τους, δημιουργώντας βιώσιμη αξία με μακροπρόθεσμη προοπτική.",
     "hero.cta1": "Οι συμμετοχές μας",
     "hero.cta2": "Επικοινωνήστε",
 
@@ -92,6 +92,11 @@ var translations = {
     "form.note": "Ευχαριστούμε! Το μήνυμά σας εστάλη.",
     "form.error": "Κάτι πήγε στραβά. Δοκιμάστε ξανά αργότερα.",
 
+    "e404.code": "Σφάλμα 404",
+    "e404.title": "Η σελίδα δεν βρέθηκε.",
+    "e404.text": "Η σελίδα που ζητήσατε δεν υπάρχει ή έχει μετακινηθεί.",
+    "e404.home": "← Επιστροφή στην αρχική",
+
     "footer.rights": "Με επιφύλαξη κάθε δικαιώματος."
   },
   en: {
@@ -102,7 +107,7 @@ var translations = {
 
     "hero.eyebrow": "Holding Company · Est. 2021",
     "hero.title": "We invest in the growth<br>and modernisation of businesses.",
-    "hero.lead": "FOREST HOLDING S.A. invests in and supports companies with solid foundations and a long-term outlook, creating value through responsible management and strategic consistency.",
+    "hero.lead": "FOREST HOLDING S.A. invests in healthy businesses and actively supports their growth and modernisation, creating sustainable value with a long-term outlook.",
     "hero.cta1": "Our holdings",
     "hero.cta2": "Get in touch",
 
@@ -179,6 +184,11 @@ var translations = {
     "form.submit": "Send",
     "form.note": "Thank you! Your message has been sent.",
     "form.error": "Something went wrong. Please try again later.",
+
+    "e404.code": "Error 404",
+    "e404.title": "Page not found.",
+    "e404.text": "The page you requested does not exist or has been moved.",
+    "e404.home": "← Back to home",
 
     "footer.rights": "All rights reserved."
   }
