@@ -74,7 +74,7 @@ var translations = {
 
     "cim.tag": "Διαχείριση Ακίνητης Περιουσίας",
     "cim.tagline": "Διαχείριση και αξιοποίηση ακίνητης περιουσίας.",
-    "cim.p1": "Η CIMOLUS A.E. δραστηριοποιείται στη διαχείριση και αξιοποίηση ακίνητης περιουσίας, με στόχο τη μακροπρόθεσμη ανάπτυξη και τη βέλτιστη απόδοση του χαρτοφυλακίου ακινήτων.",
+    "cim.p1": "Η Cimolus A.E. δραστηριοποιείται στη διαχείριση και αξιοποίηση ακίνητης περιουσίας, με στόχο τη μακροπρόθεσμη ανάπτυξη και τη βέλτιστη απόδοση του χαρτοφυλακίου ακινήτων.",
     "cim.p2": "Αναλαμβάνει τη συντήρηση, τη μίσθωση και τη στρατηγική αξιοποίηση ακινήτων, με έμφαση στην ποιότητα, τη διαφάνεια και τη δημιουργία βιώσιμης υπεραξίας.",
     "cim.sector": "Διαχείριση Ακίνητης Περιουσίας",
     "cim.contactBtn": "Επικοινωνία →",
@@ -162,7 +162,7 @@ var translations = {
 
     "cim.tag": "Real Estate Management",
     "cim.tagline": "Management and development of real estate.",
-    "cim.p1": "CIMOLUS S.A. operates in the management and development of real estate, aiming for long-term growth and optimal performance of the property portfolio.",
+    "cim.p1": "Cimolus S.A. operates in the management and development of real estate, aiming for long-term growth and optimal performance of the property portfolio.",
     "cim.p2": "It handles the maintenance, leasing and strategic development of properties, with an emphasis on quality, transparency and the creation of sustainable value.",
     "cim.sector": "Real Estate Management",
     "cim.contactBtn": "Contact →",
