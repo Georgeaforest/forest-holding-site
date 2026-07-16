@@ -13,7 +13,7 @@ var translations = {
     "nav.contact": "Επικοινωνία",
 
     "hero.eyebrow": "Εταιρεία Συμμετοχών · Est. 2021",
-    "hero.title": "Σταθερή ανάπτυξη,<br>με ρίζες στη διάρκεια.",
+    "hero.title": "Επενδύουμε στην ανάπτυξη<br>και τον εκσυγχρονισμό των επιχειρήσεων.",
     "hero.lead": "Η FOREST HOLDING A.E. επενδύει και υποστηρίζει εταιρείες με στέρεα θεμέλια και μακροπρόθεσμη προοπτική, δημιουργώντας αξία μέσα από υπεύθυνη διαχείριση και στρατηγική συνέπεια.",
     "hero.cta1": "Οι συμμετοχές μας",
     "hero.cta2": "Επικοινωνήστε",
@@ -39,6 +39,8 @@ var translations = {
     "holdings.c3tag": "Εστίαση",
     "holdings.c3name": "Λουκουμάδες Αιγαίον",
     "holdings.c3d": "Ιστορικό κατάστημα λουκουμάδων στην Αθήνα, από το 1926.",
+    "holdings.c4tag": "Διαχείριση Ακίνητης Περιουσίας",
+    "holdings.c4d": "Εταιρεία διαχείρισης και αξιοποίησης ακίνητης περιουσίας.",
     "holdings.more": "Μάθετε περισσότερα →",
 
     "sub.back": "← Πίσω στις συμμετοχές",
@@ -50,6 +52,9 @@ var translations = {
     "sub.addrLabel": "Διεύθυνση",
     "sub.visit": "Επίσκεψη ιστοσελίδας →",
     "sub.previewCap": "Στιγμιότυπο από την επίσημη ιστοσελίδα",
+    "sub.detailsLabel": "Στοιχεία",
+    "sub.sectorLabel": "Κλάδος",
+    "sub.groupLabel": "Όμιλος",
 
     "hw.tag": "Οίνος & Αποστάγματα",
     "hw.tagline": "Η e-κάβα σου, με 1.000+ ετικέτες.",
@@ -67,8 +72,15 @@ var translations = {
     "lk.p1": "Οι «Λουκουμάδες Αιγαίον» είναι ιστορικό κατάστημα της Αθήνας που σερβίρει λουκουμάδες από το 1926, στην οδό Πανεπιστημίου.",
     "lk.p2": "Με ρίζες σχεδόν έναν αιώνα και σεβασμό στην παράδοση, η επιχείρηση ανανεώνεται και επιστρέφει με σύγχρονη ματιά, κρατώντας την αυθεντική της γεύση.",
 
+    "cim.tag": "Διαχείριση Ακίνητης Περιουσίας",
+    "cim.tagline": "Διαχείριση και αξιοποίηση ακίνητης περιουσίας.",
+    "cim.p1": "Η CIMOLUS A.E. δραστηριοποιείται στη διαχείριση και αξιοποίηση ακίνητης περιουσίας, με στόχο τη μακροπρόθεσμη ανάπτυξη και τη βέλτιστη απόδοση του χαρτοφυλακίου ακινήτων.",
+    "cim.p2": "Αναλαμβάνει τη συντήρηση, τη μίσθωση και τη στρατηγική αξιοποίηση ακινήτων, με έμφαση στην ποιότητα, τη διαφάνεια και τη δημιουργία βιώσιμης υπεραξίας.",
+    "cim.sector": "Διαχείριση Ακίνητης Περιουσίας",
+    "cim.contactBtn": "Επικοινωνία →",
+
     "contact.label": "03 — Επικοινωνία",
-    "contact.title": "Ας μιλήσουμε.",
+    "contact.title": "Μιλήστε με την ομάδα μας.",
     "contact.intro": "Για ερωτήματα σχετικά με τον όμιλο, τις συμμετοχές ή συνεργασίες, επικοινωνήστε μαζί μας.",
 
     "form.name": "Ονοματεπώνυμο",
@@ -89,7 +101,7 @@ var translations = {
     "nav.contact": "Contact",
 
     "hero.eyebrow": "Holding Company · Est. 2021",
-    "hero.title": "Steady growth,<br>rooted in endurance.",
+    "hero.title": "We invest in the growth<br>and modernisation of businesses.",
     "hero.lead": "FOREST HOLDING S.A. invests in and supports companies with solid foundations and a long-term outlook, creating value through responsible management and strategic consistency.",
     "hero.cta1": "Our holdings",
     "hero.cta2": "Get in touch",
@@ -115,6 +127,8 @@ var translations = {
     "holdings.c3tag": "Food & Beverage",
     "holdings.c3name": "Aigaion Loukoumades",
     "holdings.c3d": "A historic loukoumades shop in Athens, since 1926.",
+    "holdings.c4tag": "Real Estate Management",
+    "holdings.c4d": "The group's real estate management and development company.",
     "holdings.more": "Learn more →",
 
     "sub.back": "← Back to holdings",
@@ -126,6 +140,9 @@ var translations = {
     "sub.addrLabel": "Address",
     "sub.visit": "Visit website →",
     "sub.previewCap": "Screenshot of the official website",
+    "sub.detailsLabel": "Details",
+    "sub.sectorLabel": "Sector",
+    "sub.groupLabel": "Group",
 
     "hw.tag": "Wine & Spirits",
     "hw.tagline": "Your online cellar, with 1,000+ labels.",
@@ -143,8 +160,15 @@ var translations = {
     "lk.p1": "“Aigaion Loukoumades” is a historic Athens shop that has been serving loukoumades since 1926, on Panepistimiou Street.",
     "lk.p2": "With almost a century of roots and respect for tradition, the business is being renewed and returns with a modern touch, keeping its authentic flavour.",
 
+    "cim.tag": "Real Estate Management",
+    "cim.tagline": "Management and development of real estate.",
+    "cim.p1": "CIMOLUS S.A. operates in the management and development of real estate, aiming for long-term growth and optimal performance of the property portfolio.",
+    "cim.p2": "It handles the maintenance, leasing and strategic development of properties, with an emphasis on quality, transparency and the creation of sustainable value.",
+    "cim.sector": "Real Estate Management",
+    "cim.contactBtn": "Contact →",
+
     "contact.label": "03 — Contact",
-    "contact.title": "Let's talk.",
+    "contact.title": "Talk to our team.",
     "contact.intro": "For enquiries about the group, our holdings or partnerships, get in touch with us.",
 
     "form.name": "Full name",

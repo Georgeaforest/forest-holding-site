@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CIMOLUS A.E. — Εταιρεία Διαχείρισης Ακίνητης Περιουσίας του ομίλου FOREST HOLDING A.E.">
+  <title>CIMOLUS A.E. — FOREST HOLDING A.E.</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== ΚΕΦΑΛΙΔΑ ===== -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="FOREST HOLDING — Investment Group">
+        <img src="images/fh-tree.png" alt="" class="brand-tree" aria-hidden="true">
+        <span class="brand-word">
+          <span class="brand-title">FOREST HOLDING</span>
+          <span class="brand-sub">INVESTMENT GROUP</span>
+        </span>
+      </a>
+
+      <nav class="site-nav" aria-label="Κύρια πλοήγηση">
+        <ul>
+          <li><a href="index.html#hero" data-i18n="nav.home">Αρχική</a></li>
+          <li><a href="index.html#about" data-i18n="nav.about">Σχετικά με εμάς</a></li>
+          <li><a href="index.html#holdings" data-i18n="nav.holdings">Συμμετοχές</a></li>
+          <li><a href="index.html#contact" data-i18n="nav.contact">Επικοινωνία</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-right">
+        <button class="lang-toggle" id="langToggle" aria-label="Change language">EN</button>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== ΕΠΙΚΕΦΑΛΙΔΑ ΕΤΑΙΡΕΙΑΣ ===== -->
+    <section class="subhero">
+      <div class="container">
+        <a href="index.html#holdings" class="back-link" data-i18n="sub.back">← Πίσω στις συμμετοχές</a>
+        <div class="subhero-inner">
+          <div class="company-emblem" aria-hidden="true">CI</div>
+          <div>
+            <p class="eyebrow" data-i18n="cim.tag">Διαχείριση Ακίνητης Περιουσίας</p>
+            <h1>CIMOLUS</h1>
+            <p class="lead" data-i18n="cim.tagline">Διαχείριση και αξιοποίηση ακίνητης περιουσίας.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ΠΕΡΙΕΧΟΜΕΝΟ ===== -->
+    <section class="section">
+      <div class="container company-layout">
+        <div class="company-about">
+          <p class="section-label" data-i18n="sub.aboutLabel">Η εταιρεία</p>
+          <p data-i18n="cim.p1">
+            Η CIMOLUS A.E. δραστηριοποιείται στη διαχείριση και αξιοποίηση
+            ακίνητης περιουσίας, με στόχο τη μακροπρόθεσμη ανάπτυξη και τη
+            βέλτιστη απόδοση του χαρτοφυλακίου ακινήτων.
+          </p>
+          <p data-i18n="cim.p2">
+            Αναλαμβάνει τη συντήρηση, τη μίσθωση και τη στρατηγική αξιοποίηση
+            ακινήτων, με έμφαση στην ποιότητα, τη διαφάνεια και τη δημιουργία
+            βιώσιμης υπεραξίας.
+          </p>
+        </div>
+
+        <aside class="company-info">
+          <p class="section-label" data-i18n="sub.detailsLabel">Στοιχεία</p>
+          <ul class="info-list">
+            <li>
+              <span data-i18n="sub.sectorLabel">Κλάδος</span>
+              <span data-i18n="cim.sector">Διαχείριση Ακίνητης Περιουσίας</span>
+            </li>
+            <li>
+              <span data-i18n="sub.groupLabel">Όμιλος</span>
+              <span>FOREST HOLDING A.E.</span>
+            </li>
+          </ul>
+          <a href="index.html#contact" class="btn btn-primary" data-i18n="cim.contactBtn">Επικοινωνία →</a>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== ΥΠΟΣΕΛΙΔΟ ===== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span class="brand-name">FOREST<span class="brand-thin"> HOLDING</span></span>
+      <p>© <span id="year"></span> FOREST HOLDING A.E. — <span data-i18n="footer.rights">Με επιφύλαξη κάθε δικαιώματος.</span></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
