@@ -58,7 +58,7 @@ img { max-width: 100%; display: block; }
   position: sticky;               /* «κολλάει» στην κορυφή κατά την κύλιση */
   top: 0;
   z-index: 100;
-  background: #0f1e0f;             /* ίδιο πράσινο με το φόντο του logo, ώστε να «λιώνει» */
+  background: #142116;             /* ίδιο πράσινο με το φόντο του logo, ώστε να «λιώνει» */
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
@@ -66,27 +66,13 @@ img { max-width: 100%; display: block; }
   display: flex;
   align-items: center;
   gap: 32px;
-  height: 92px;
+  height: 184px;
 }
 
 .brand { display: flex; align-items: center; gap: 14px; color: #fff; margin-right: auto; }
 
-/* Λογότυπο: εικόνα δέντρου + ζωντανό κείμενο (ώστε τα γράμματα να ρυθμίζονται ανεξάρτητα) */
-.brand-tree { height: 62px; width: auto; display: block; }
-.brand-word { display: flex; flex-direction: column; line-height: 1; }
-.brand-title {
-  color: #d0ecd0;                 /* ίδιο mint με το πρωτότυπο logo */
-  font-family: var(--font-sans);
-  font-weight: 500;
-  font-size: 1.75rem;
-  letter-spacing: 5px;
-}
-.brand-sub {
-  color: #4a9a50;                 /* ίδιο πράσινο με το δέντρο */
-  font-size: 0.72rem;
-  letter-spacing: 7px;
-  margin-top: 7px;
-}
+/* Λογότυπο: πλήρες οριζόντιο lockup (δέντρο + κείμενο) σε ένα αρχείο εικόνας */
+.brand-logo { height: 160px; width: auto; display: block; }
 
 .header-right { display: flex; align-items: center; gap: 18px; }
 
@@ -478,7 +464,5 @@ img { max-width: 100%; display: block; }
 
   .subhero-inner { flex-direction: column; align-items: flex-start; gap: 20px; }
   .company-emblem { width: 72px; height: 72px; font-size: 1.5rem; }
-  .brand-tree { height: 48px; }
-  .brand-title { font-size: 1.25rem; letter-spacing: 3px; }
-  .brand-sub { font-size: 0.62rem; letter-spacing: 4px; margin-top: 5px; }
+  .brand-logo { height: 46px; }
 }
