@@ -439,14 +439,15 @@ img { max-width: 100%; display: block; }
   .about-grid h2 { position: static; }
   .company-info { position: static; }
   .cards { grid-template-columns: repeat(2, 1fr); }
-}
 
-@media (max-width: 640px) {
-  /* Το μενού γίνεται κατακόρυφο πτυσσόμενο */
+  /* Πιο συμπαγές header + πτυσσόμενο μενού (το μεγάλο logo δεν χωράει με οριζόντιο nav) */
+  .header-inner { height: 112px; }
+  .brand-logo { height: 82px; }
+
   .nav-toggle { display: flex; }
   .site-nav {
     position: absolute;
-    top: 92px; left: 0; right: 0;
+    top: 112px; left: 0; right: 0;
     background: var(--green-900);
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     max-height: 0;
@@ -457,12 +458,18 @@ img { max-width: 100%; display: block; }
   .site-nav ul { flex-direction: column; gap: 0; padding: 8px 24px 20px; }
   .site-nav li { border-bottom: 1px solid rgba(255, 255, 255, 0.06); }
   .site-nav a { display: block; padding: 14px 0; }
+}
 
+@media (max-width: 640px) {
   .cards { grid-template-columns: 1fr; }
   .section { padding: 64px 0; }
   .hero { padding: 90px 0; }
 
   .subhero-inner { flex-direction: column; align-items: flex-start; gap: 20px; }
   .company-emblem { width: 72px; height: 72px; font-size: 1.5rem; }
-  .brand-logo { height: 46px; }
+
+  /* Ακόμα πιο συμπαγές header σε κινητά */
+  .header-inner { height: 92px; }
+  .brand-logo { height: 60px; }
+  .site-nav { top: 92px; }
 }
