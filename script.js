@@ -81,16 +81,16 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(function (res) {
           if (btn) btn.disabled = false;
           if (res.success) {
-            if (note) note.hidden = false;   // επιτυχία
+            if (note) { note.hidden = false; note.scrollIntoView({ behavior: "smooth", block: "center" }); }
             form.reset();
           } else {
-            if (errNote) errNote.hidden = false;  // η υπηρεσία απάντησε με σφάλμα
+            if (errNote) { errNote.hidden = false; errNote.scrollIntoView({ behavior: "smooth", block: "center" }); }
           }
         })
         .catch(function () {
           // Αποτυχία δικτύου
           if (btn) btn.disabled = false;
-          if (errNote) errNote.hidden = false;
+          if (errNote) { errNote.hidden = false; errNote.scrollIntoView({ behavior: "smooth", block: "center" }); }
         });
     });
   }
