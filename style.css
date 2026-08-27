@@ -347,6 +347,14 @@ img { max-width: 100%; display: block; }
 }
 .info-list a { color: var(--green-700); transition: color var(--transition); word-break: break-word; }
 .info-list a:hover { color: var(--gold); }
+.info-list .map-link {
+  margin-top: 2px;
+  font-size: 0.85rem;
+  color: var(--gold);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.info-list .map-link:hover { color: var(--green-700); }
 .company-info .btn { width: 100%; text-align: center; }
 
 /* Στιγμιότυπο (screenshot) ιστοσελίδας */
