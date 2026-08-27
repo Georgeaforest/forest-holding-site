@@ -358,6 +358,14 @@ img { max-width: 100%; display: block; }
 .company-info .btn { width: 100%; text-align: center; }
 
 /* Στιγμιότυπο (screenshot) ιστοσελίδας */
+/* Ζώνη λογότυπου — για εταιρείες χωρίς ιστοσελίδα, στη θέση του screenshot */
+.logo-band { padding: 96px 0 0; }
+.logo-band .container { display: flex; justify-content: center; }
+.company-logo { width: min(760px, 88%); height: auto; }
+
+/* Έμβλημα με εικονίδιο αντί για αρχικά */
+.company-emblem.has-logo img { width: 62%; height: auto; display: block; }
+
 .preview-wrap { padding-bottom: 0; }
 .site-preview { margin: 0; }
 .site-preview img {
@@ -492,6 +500,7 @@ img { max-width: 100%; display: block; }
 @media (max-width: 640px) {
   .cards { grid-template-columns: 1fr; }
   .section { padding: 64px 0; }
+  .logo-band { padding: 64px 0 0; }
   .hero { padding: 90px 0; }
 
   .subhero-inner { flex-direction: column; align-items: flex-start; gap: 20px; }
