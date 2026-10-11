@@ -11,44 +11,44 @@
   <link rel="alternate" hreflang="x-default" href="https://forestholding.gr/privacy.html">
   <link rel="icon" type="image/png" href="../images/FH_icon_dark_128w.png">
   <link rel="apple-touch-icon" href="../images/FH_icon_dark_128w.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Instrument+Sans:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 
-  <!-- ===== ΚΕΦΑΛΙΔΑ ===== -->
-  <header class="site-header" id="top">
-    <div class="container header-inner">
-      <a href="index.html" class="brand" aria-label="FOREST HOLDING — Investment Group">
-        <img src="../images/FH_horizontal_green_bg_3200w.png" alt="FOREST HOLDING — Investment Group" class="brand-logo">
+  <!-- ===== ΚΕΦΑΛΙΔΑ / ΠΛΟΗΓΗΣΗ ===== -->
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html" aria-label="Forest Holding — Investment Group">
+        <img src="../images/FH_horizontal_green_bg_3200w.png" alt="Forest Holding — Investment Group">
       </a>
-
-      <nav class="site-nav" aria-label="Κύρια πλοήγηση">
-        <ul>
-          <li><a href="index.html#hero">Αρχική</a></li>
-          <li><a href="index.html#about">Σχετικά με εμάς</a></li>
-          <li><a href="index.html#holdings">Συμμετοχές</a></li>
-          <li><a href="index.html#contact">Επικοινωνία</a></li>
-        </ul>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Άνοιγμα μενού">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+      <nav class="nav" id="nav" aria-label="Κύρια πλοήγηση">
+        <a href="index.html#about">Σχετικά με εμάς</a>
+        <a href="index.html#philosophy">Φιλοσοφία</a>
+        <a href="index.html#holdings">Συμμετοχές</a>
+        <a href="index.html#contact">Επικοινωνία</a>
+        <!-- Διακόπτης γλώσσας: δείχνει την ΑΛΛΗ γλώσσα -->
+        <a class="lang" href="../privacy.html" hreflang="en" lang="en" aria-label="Switch to English">En</a>
+        <a class="btn btn--gold btn--sm" href="index.html#contact">Επικοινωνήστε</a>
       </nav>
-
-      <div class="header-right">
-        <a class="lang-toggle" href="../privacy.html" aria-label="Switch to English" hreflang="en">EN</a>
-        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
     </div>
   </header>
 
-  <main>
+  <main id="top">
+
     <section class="section">
-      <div class="container legal">
-        <p class="section-label">Νομικά</p>
-        <h1>Πολιτική Απορρήτου</h1>
-        <p class="muted">Τελευταία ενημέρωση: 16 Ιουλίου 2026</p>
+      <div class="container legal stack" style="gap:16px">
+        <p class="eyebrow">Νομικά</p>
+        <h1 class="h2">Πολιτική Απορρήτου</h1>
+        <p class="body">Τελευταία ενημέρωση: 16 Ιουλίου 2026</p>
 
         <p>
-          Η παρούσα Πολιτική Απορρήτου περιγράφει πώς η FOREST HOLDING A.E.
+          Η παρούσα Πολιτική Απορρήτου περιγράφει πώς η Forest Holding A.E.
           συλλέγει, χρησιμοποιεί και προστατεύει τα προσωπικά δεδομένα που μας
           παρέχετε μέσω του ιστότοπου <strong>forestholding.gr</strong>, σύμφωνα
           με τον Γενικό Κανονισμό Προστασίας Δεδομένων (ΕΕ) 2016/679 (GDPR) και
@@ -57,7 +57,7 @@
 
         <h2>1. Υπεύθυνος Επεξεργασίας</h2>
         <p>
-          FOREST HOLDING A.E.<br>
+          Forest Holding A.E.<br>
           Δελφών 30, Νέο Ηράκλειο 141 22, Αττική<br>
           ΑΦΜ: 801615381 · ΓΕΜΗ: 160182407000
         </p>
@@ -138,19 +138,24 @@
         </p>
 
         <p style="margin-top:32px;">
-          <a href="index.html" class="btn btn-primary">← Επιστροφή στην αρχική</a>
+          <a href="index.html" class="btn btn--dark">← Επιστροφή στην αρχική</a>
         </p>
       </div>
     </section>
+
   </main>
 
   <!-- ===== ΥΠΟΣΕΛΙΔΟ ===== -->
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <span class="brand-name">FOREST<span class="brand-thin"> HOLDING</span></span>
-      <div class="footer-meta">
-        <p class="footer-legal">FOREST HOLDING A.E. · Δελφών 30, Νέο Ηράκλειο 141 22</p>
-        <p>© <span id="year"></span> FOREST HOLDING A.E. — Με επιφύλαξη κάθε δικαιώματος. · <a href="privacy.html">Πολιτική Απορρήτου</a></p>
+    <div class="container">
+      <div class="stack" style="gap:10px">
+        <span class="wordmark">Forest Holding</span>
+        <span class="addr footer-legal">Forest Holding A.E. · Δελφών 30, Νέο Ηράκλειο 141 22</span>
+      </div>
+      <div class="links">
+        <a href="privacy.html">Πολιτική Απορρήτου</a>
+        <a href="../privacy.html" hreflang="en" lang="en">English</a>
+        <span>© <span id="year"></span> Forest Holding A.E. — Με επιφύλαξη κάθε δικαιώματος.</span>
       </div>
     </div>
   </footer>

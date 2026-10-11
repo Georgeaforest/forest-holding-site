@@ -6,63 +6,67 @@
   <meta name="robots" content="noindex">
   <meta name="description" content="Page not found — FOREST HOLDING">
   <title>Page not found — FOREST HOLDING</title>
-  <link rel="canonical" href="https://forestholding.gr/404.html">
-  <link rel="icon" type="image/png" href="images/FH_icon_dark_128w.png">
-  <link rel="apple-touch-icon" href="images/FH_icon_dark_128w.png">
-  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="/images/FH_icon_dark_128w.png">
+  <link rel="apple-touch-icon" href="/images/FH_icon_dark_128w.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Instrument+Sans:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
 </head>
 <body>
 
-  <!-- ===== ΚΕΦΑΛΙΔΑ ===== -->
-  <header class="site-header" id="top">
-    <div class="container header-inner">
-      <a href="index.html" class="brand" aria-label="FOREST HOLDING — Investment Group">
-        <img src="images/FH_horizontal_green_bg_3200w.png" alt="FOREST HOLDING — Investment Group" class="brand-logo">
+  <!-- ===== ΚΕΦΑΛΙΔΑ / ΠΛΟΗΓΗΣΗ ===== -->
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/index.html" aria-label="Forest Holding — Investment Group">
+        <img src="/images/FH_horizontal_green_bg_3200w.png" alt="Forest Holding — Investment Group">
       </a>
-
-      <nav class="site-nav" aria-label="Main navigation">
-        <ul>
-          <li><a href="index.html#hero">Home</a></li>
-          <li><a href="index.html#about">About us</a></li>
-          <li><a href="index.html#holdings">Holdings</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
-        </ul>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+      <nav class="nav" id="nav" aria-label="Main navigation">
+        <a href="/index.html#about">About us</a>
+        <a href="/index.html#philosophy">Philosophy</a>
+        <a href="/index.html#holdings">Holdings</a>
+        <a href="/index.html#contact">Contact</a>
+        <!-- Διακόπτης γλώσσας: δείχνει την ΑΛΛΗ γλώσσα -->
+        <a class="lang" href="/el/404.html" hreflang="el" lang="el" aria-label="Αλλαγή σε Ελληνικά">Ελ</a>
+        <a class="btn btn--gold btn--sm" href="/index.html#contact">Get in touch</a>
       </nav>
-
-      <div class="header-right">
-        <a class="lang-toggle" href="el/404.html" aria-label="Αλλαγή σε Ελληνικά" hreflang="el">ΕΛ</a>
-        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
     </div>
   </header>
 
-  <main>
-    <section class="subhero">
+  <main id="top">
+
+    <section class="hero holding-hero">
       <div class="container">
         <p class="eyebrow">Error 404</p>
-        <h1>Page not found.</h1>
-        <p class="lead">The page you requested does not exist or has been moved.</p>
+        <h1 class="display">Page not found.</h1>
+        <p class="tagline">The page you requested does not exist or has been moved.</p>
         <p style="margin-top:28px;">
-          <a href="index.html" class="btn btn-primary">← Back to home</a>
+          <a href="/index.html" class="btn btn--gold">← Back to home</a>
         </p>
       </div>
     </section>
+
   </main>
 
   <!-- ===== ΥΠΟΣΕΛΙΔΟ ===== -->
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <span class="brand-name">FOREST<span class="brand-thin"> HOLDING</span></span>
-      <div class="footer-meta">
-        <p class="footer-legal">FOREST HOLDING S.A. · Delfon 30, Neo Iraklio 141 22, Greece</p>
-        <p>© <span id="year"></span> FOREST HOLDING S.A. — All rights reserved. · <a href="privacy.html">Privacy Policy</a></p>
+    <div class="container">
+      <div class="stack" style="gap:10px">
+        <span class="wordmark">Forest Holding</span>
+        <span class="addr footer-legal">Forest Holding S.A. · Delfon 30, Neo Iraklio 141 22, Greece</span>
+      </div>
+      <div class="links">
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/el/404.html" hreflang="el" lang="el">Ελληνικά</a>
+        <span>© <span id="year"></span> Forest Holding S.A. — All rights reserved.</span>
       </div>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="/script.js"></script>
   <!-- Cloudflare Web Analytics (cookieless) -->
   <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "63602da1e3f84c1895be90b72761b41d"}'></script>
   <!-- End Cloudflare Web Analytics -->

@@ -54,115 +54,146 @@
   }
   </script>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Instrument+Sans:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <!-- ===== ΚΕΦΑΛΙΔΑ / ΠΛΟΗΓΗΣΗ ===== -->
-  <header class="site-header" id="top">
-    <div class="container header-inner">
-      <a href="#top" class="brand" aria-label="FOREST HOLDING — Investment Group">
-        <img src="images/FH_horizontal_green_bg_3200w.png" alt="FOREST HOLDING — Investment Group" class="brand-logo">
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="#top" aria-label="Forest Holding — Investment Group">
+        <img src="images/FH_horizontal_green_bg_3200w.png" alt="Forest Holding — Investment Group">
       </a>
-
-      <nav class="site-nav" aria-label="Main navigation">
-        <ul>
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#about">About us</a></li>
-          <li><a href="#holdings">Holdings</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-
-      <div class="header-right">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+      <nav class="nav" id="nav" aria-label="Main navigation">
+        <a href="#about">About us</a>
+        <a href="#philosophy">Philosophy</a>
+        <a href="#holdings">Holdings</a>
+        <a href="#contact">Contact</a>
         <!-- Διακόπτης γλώσσας: δείχνει την ΑΛΛΗ γλώσσα -->
-        <a class="lang-toggle" href="el/index.html" aria-label="Αλλαγή σε Ελληνικά" hreflang="el">ΕΛ</a>
-
-        <!-- Κουμπί για κινητά (hamburger) -->
-        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
+        <a class="lang" href="el/index.html" hreflang="el" lang="el" aria-label="Αλλαγή σε Ελληνικά">Ελ</a>
+        <a class="btn btn--gold btn--sm" href="#contact">Get in touch</a>
+      </nav>
     </div>
   </header>
 
-  <main>
+  <main id="top">
 
     <!-- ===== ΑΡΧΙΚΗ (HERO) ===== -->
     <section class="hero" id="hero">
-      <div class="container hero-inner">
-        <p class="eyebrow">Holding Company · Est. 2021</p>
-        <h1>We invest in the growth<br>and modernisation of businesses.</h1>
-        <p class="lead">FOREST HOLDING invests in healthy businesses and actively supports their growth and modernisation, creating sustainable value with a long-term outlook.</p>
-        <div class="hero-actions">
-          <a href="#holdings" class="btn btn-primary">Our holdings</a>
-          <a href="#contact" class="btn btn-ghost">Get in touch</a>
+      <div class="container grid">
+        <div class="col-8 stack stack--lg">
+          <p class="eyebrow eyebrow--line">Holding Company · Est. 2021</p>
+          <h1 class="display">We invest in the growth and modernisation of businesses.</h1>
+          <p class="lead">Forest Holding invests in healthy businesses and actively supports their growth and modernisation, creating sustainable value with a long-term outlook.</p>
+          <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:8px">
+            <a class="btn btn--gold" href="#holdings">Our holdings
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a class="btn btn--ghost" href="#contact">Get in touch</a>
+          </div>
+        </div>
+      </div>
+      <div class="facts facts--4">
+        <div class="container">
+          <div class="fact"><span class="fact__num">2021</span><span class="fact__label">Established</span></div>
+          <div class="fact"><span class="fact__num">4</span><span class="fact__label">Portfolio companies</span></div>
+          <div class="fact"><span class="fact__num">3</span><span class="fact__label">Sectors — wine, hospitality, real estate</span></div>
+          <div class="fact"><span class="fact__num">1926</span><span class="fact__label">Oldest brand in the group</span></div>
         </div>
       </div>
     </section>
 
     <!-- ===== ΣΧΕΤΙΚΑ ΜΕ ΕΜΑΣ ===== -->
     <section class="section" id="about">
-      <div class="container">
-        <p class="section-label">01 — About us</p>
-        <div class="about-grid">
-          <div>
-            <h2>A group with a long-term approach.</h2>
-          </div>
-          <div class="about-text">
-            <p>FOREST HOLDING is a Greek holding company managing a diversified portfolio of businesses across strategic sectors of the economy. Our aim is to create sustainable value for shareholders, employees and local communities.</p>
-            <p>With a focus on transparency, corporate governance and long-term stability, we support the group's companies so they can grow responsibly and consistently.</p>
+      <div class="container grid">
+        <div class="col-4 stack">
+          <p class="eyebrow">01 — About us</p>
+          <h2 class="h2">A group with a long-term approach.</h2>
+        </div>
+        <div class="offset-6 stack body-lg" style="gap:24px">
+          <p>Forest Holding is a Greek holding company managing a diversified portfolio of businesses across strategic sectors of the economy. Our aim is to create sustainable value for shareholders, employees and local communities.</p>
+          <p>With a focus on transparency, corporate governance and long-term stability, we support the group's companies so they can grow responsibly and consistently.</p>
+        </div>
+        <div class="col-12 values">
+          <div class="value"><span class="value__num">01</span><h3 class="h3">Endurance</h3><p class="body">We invest with a horizon of decades, not quarters.</p></div>
+          <div class="value"><span class="value__num">02</span><h3 class="h3">Transparency</h3><p class="body">Clear processes and responsible corporate governance.</p></div>
+          <div class="value"><span class="value__num">03</span><h3 class="h3">Partnership</h3><p class="body">We support teams, we do not replace them.</p></div>
+        </div>
+      </div>
+    </section>
 
-            <ul class="value-list">
-              <li>
-                <h3>Endurance</h3>
-                <p>We invest with a horizon of decades, not quarters.</p>
-              </li>
-              <li>
-                <h3>Transparency</h3>
-                <p>Clear processes and responsible corporate governance.</p>
-              </li>
-              <li>
-                <h3>Partnership</h3>
-                <p>We support teams, we do not replace them.</p>
-              </li>
-            </ul>
-          </div>
+    <!-- ===== ΦΙΛΟΣΟΦΙΑ ===== -->
+    <section class="section section--sand" id="philosophy">
+      <div class="container grid" style="row-gap:56px">
+        <div class="col-5 stack">
+          <p class="eyebrow">02 — Our philosophy</p>
+          <h2 class="h2">Patient capital, like a forest.</h2>
+          <p class="body-lg" style="font-size:18px">A forest is not built; it is grown. It rewards those who plant early, tend consistently and resist the urge to harvest too soon. That is how we think about the companies we invest in.</p>
+        </div>
+        <div class="offset-7">
+          <blockquote class="quote">“We don't look for the next quarter. We look for businesses with character, quality and an authentic Greek identity — and we stay.”</blockquote>
+        </div>
+        <div class="col-12 steps">
+          <div class="step"><span class="step__label">Select</span><h3>Healthy businesses first</h3><p class="body">Sound fundamentals, strong teams and products people already love. We invest in what works, then help it work better.</p></div>
+          <div class="step"><span class="step__label">Support</span><h3>Modernise, don't replace</h3><p class="body">Governance, systems, digital tools and capital — brought in alongside the people who built the business.</p></div>
+          <div class="step"><span class="step__label">Stay</span><h3>A horizon of decades</h3><p class="body">No exit clock. Value compounds when ownership is stable and decisions are made for the long run.</p></div>
         </div>
       </div>
     </section>
 
     <!-- ===== ΣΥΜΜΕΤΟΧΕΣ ===== -->
-    <section class="section section-alt" id="holdings">
-      <div class="container">
-        <p class="section-label">02 — Holdings</p>
-        <h2>Our portfolio</h2>
-        <p class="section-intro">Selected investments in companies with character, quality and an authentic Greek identity.</p>
-
+    <section class="section" id="holdings">
+      <div class="container stack" style="gap:64px">
+        <div class="holdings-head">
+          <div class="stack" style="max-width:640px">
+            <p class="eyebrow">03 — Holdings</p>
+            <h2 class="h2">Our portfolio</h2>
+            <p class="body-lg" style="font-size:18px">Selected investments in companies with character, quality and an authentic Greek identity.</p>
+          </div>
+          <p class="meta">Four companies · Three sectors</p>
+        </div>
         <div class="cards">
           <a class="card" href="house-of-wine.html">
-            <span class="card-tag">Wine & Spirits</span>
-            <h3>House of Wine</h3>
-            <p>One of the largest online wine cellars in Greece, with 1,000+ labels of wine and spirits.</p>
-            <span class="card-more">Learn more →</span>
+            <img class="card__media card__media--top" src="images/house-of-wine.jpg" alt="The houseofwine.gr online cellar" loading="lazy">
+            <div class="card__body">
+              <div class="card__top"><span class="card__sector">Wine &amp; Spirits</span><span class="monogram monogram--logo" aria-hidden="true"><img src="images/how-glass.png" alt=""></span></div>
+              <h3>House of Wine</h3>
+              <p class="body">One of the largest online wine cellars in Greece, with 1,000+ labels of wine and spirits.</p>
+              <span class="more">Learn more <span aria-hidden="true">→</span></span>
+            </div>
           </a>
           <a class="card" href="gaia-wines.html">
-            <span class="card-tag">Winery</span>
-            <h3>Gaia Wines</h3>
-            <p>A winery of indigenous Greek varieties in Santorini and Nemea, exporting to 25+ countries.</p>
-            <span class="card-more">Learn more →</span>
+            <img class="card__media" src="images/gaia-santorini-winery.jpg" alt="The Gaia winery cellar in Santorini" loading="lazy">
+            <div class="card__body">
+              <div class="card__top"><span class="card__sector">Winery</span><span class="monogram monogram--logo" aria-hidden="true"><img src="images/gaia-ammonite.svg" alt=""></span></div>
+              <h3>Gaia Wines</h3>
+              <p class="body">A winery of indigenous Greek varieties in Santorini and Nemea, exporting to 25+ countries.</p>
+              <span class="more">Learn more <span aria-hidden="true">→</span></span>
+            </div>
           </a>
           <a class="card" href="loukoumades-aigaion.html">
-            <span class="card-tag">Food & Beverage</span>
-            <h3>Aigaion Loukoumades</h3>
-            <p>A historic loukoumades shop in Athens, since 1926.</p>
-            <span class="card-more">Learn more →</span>
+            <img class="card__media" src="images/aigaion-brand.jpg" alt="Aigaion Loukoumades — since 1926" loading="lazy">
+            <div class="card__body">
+              <div class="card__top"><span class="card__sector">Food &amp; Beverage</span><span class="monogram monogram--logo" aria-hidden="true"><img src="images/aigaion-mark.png" alt=""></span></div>
+              <h3>Aigaion Loukoumades</h3>
+              <p class="body">A historic loukoumades shop in Athens, since 1926.</p>
+              <span class="more">Learn more <span aria-hidden="true">→</span></span>
+            </div>
           </a>
           <a class="card" href="cimolus.html">
-            <span class="card-tag">Real Estate Management</span>
-            <h3>Cimolus</h3>
-            <p>The group's real estate management and development company.</p>
-            <span class="card-more">Learn more →</span>
+            <div class="card__media card__media--logo"><img src="images/cimolus-horizontal-light-800w.png" alt="Cimolus" loading="lazy"></div>
+            <div class="card__body">
+              <div class="card__top"><span class="card__sector">Real Estate Management</span><span class="monogram monogram--logo" aria-hidden="true"><img src="images/cimolus-icon-only-dark-300w.png" alt=""></span></div>
+              <h3>Cimolus</h3>
+              <p class="body">The group's real estate management and development company.</p>
+              <span class="more">Learn more <span aria-hidden="true">→</span></span>
+            </div>
           </a>
         </div>
       </div>
@@ -170,37 +201,34 @@
 
     <!-- ===== ΕΠΙΚΟΙΝΩΝΙΑ ===== -->
     <section class="section" id="contact">
-      <div class="container contact-grid">
-        <div>
-          <p class="section-label">03 — Contact</p>
-          <h2>Talk to our team.</h2>
-          <p class="section-intro">For enquiries about the group, our holdings or partnerships, get in touch with us.</p>
-
+      <div class="container grid" style="row-gap:48px">
+        <div class="col-5 stack" style="gap:24px">
+          <p class="eyebrow">04 — Contact</p>
+          <h2 class="h2">Talk to our team.</h2>
+          <p class="body-lg" style="font-size:18px">For enquiries about the group, our holdings or partnerships, get in touch with us.</p>
+          <!-- Email/τηλέφωνο σκόπιμα ΔΕΝ εμφανίζονται — όλα μέσω της φόρμας -->
+          <div class="contact-details">
+            <div class="kv"><span class="kv__k">Head office</span><span class="kv__v">Delfon 30, Neo Iraklio 141 22, Greece</span></div>
+          </div>
         </div>
 
         <!-- Φόρμα επικοινωνίας — αποστολή μέσω Web3Forms (στέλνει στο info@forestholding.gr) -->
-        <form class="contact-form" novalidate>
-          <!-- ΑΝΤΙΚΑΤΕΣΤΗΣΕ με το δικό σου access key από https://web3forms.com (δωρεάν) -->
+        <form class="form contact-form offset-7" novalidate>
           <input type="hidden" name="access_key" value="2d1455b8-f04c-4919-a3ee-ed4a234013b3">
           <input type="hidden" name="subject" value="New message from forestholding.gr">
-          <input type="hidden" name="from_name" value="FOREST HOLDING — Website">
+          <input type="hidden" name="from_name" value="Forest Holding — Website">
           <!-- Honeypot κατά των bots: αν συμπληρωθεί, το μήνυμα απορρίπτεται -->
           <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
 
-          <div class="field">
-            <label for="name">Full name</label>
-            <input type="text" id="name" name="name" placeholder="Your name" required>
+          <div class="form__row">
+            <div class="field"><label for="name">Full name</label><input type="text" id="name" name="name" placeholder="Your name" autocomplete="name" required></div>
+            <div class="field"><label for="email">Email</label><input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required></div>
           </div>
-          <div class="field">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          <div class="field"><label for="message">Message</label><textarea id="message" name="message" rows="6" placeholder="Your message…" required></textarea></div>
+          <div class="form__foot">
+            <p class="form__note">By submitting, your information is processed in accordance with our <a href="privacy.html">Privacy Policy</a>.</p>
+            <button class="btn btn--dark" type="submit">Send</button>
           </div>
-          <div class="field">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="4" placeholder="Your message…" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary">Send</button>
-          <p class="form-consent">By submitting, your information is processed in accordance with our <a href="privacy.html">Privacy Policy</a>.</p>
           <p class="form-note" hidden>Thank you! Your message has been sent.</p>
           <p class="form-error" hidden>Something went wrong. Please try again later.</p>
         </form>
@@ -211,11 +239,15 @@
 
   <!-- ===== ΥΠΟΣΕΛΙΔΟ ===== -->
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <span class="brand-name">FOREST<span class="brand-thin"> HOLDING</span></span>
-      <div class="footer-meta">
-        <p class="footer-legal">FOREST HOLDING S.A. · Delfon 30, Neo Iraklio 141 22, Greece</p>
-        <p>© <span id="year"></span> FOREST HOLDING S.A. — All rights reserved. · <a href="privacy.html">Privacy Policy</a></p>
+    <div class="container">
+      <div class="stack" style="gap:10px">
+        <span class="wordmark">Forest Holding</span>
+        <span class="addr footer-legal">Forest Holding S.A. · Delfon 30, Neo Iraklio 141 22, Greece</span>
+      </div>
+      <div class="links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="el/index.html" hreflang="el" lang="el">Ελληνικά</a>
+        <span>© <span id="year"></span> Forest Holding S.A. — All rights reserved.</span>
       </div>
     </div>
   </footer>

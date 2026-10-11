@@ -63,111 +63,144 @@
   }
   </script>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Instrument+Sans:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 
-  <!-- ===== ΚΕΦΑΛΙΔΑ ===== -->
-  <header class="site-header" id="top">
-    <div class="container header-inner">
-      <a href="index.html" class="brand" aria-label="FOREST HOLDING — Investment Group">
-        <img src="../images/FH_horizontal_green_bg_3200w.png" alt="FOREST HOLDING — Investment Group" class="brand-logo">
+  <!-- ===== ΚΕΦΑΛΙΔΑ / ΠΛΟΗΓΗΣΗ ===== -->
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html" aria-label="Forest Holding — Investment Group">
+        <img src="../images/FH_horizontal_green_bg_3200w.png" alt="Forest Holding — Investment Group">
       </a>
-
-      <nav class="site-nav" aria-label="Κύρια πλοήγηση">
-        <ul>
-          <li><a href="index.html#hero">Αρχική</a></li>
-          <li><a href="index.html#about">Σχετικά με εμάς</a></li>
-          <li><a href="index.html#holdings">Συμμετοχές</a></li>
-          <li><a href="index.html#contact">Επικοινωνία</a></li>
-        </ul>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Άνοιγμα μενού">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+      <nav class="nav" id="nav" aria-label="Κύρια πλοήγηση">
+        <a href="index.html#about">Σχετικά με εμάς</a>
+        <a href="index.html#philosophy">Φιλοσοφία</a>
+        <a href="index.html#holdings" aria-current="page">Συμμετοχές</a>
+        <a href="index.html#contact">Επικοινωνία</a>
+        <!-- Διακόπτης γλώσσας: δείχνει την ΑΛΛΗ γλώσσα -->
+        <a class="lang" href="../gaia-wines.html" hreflang="en" lang="en" aria-label="Switch to English">En</a>
+        <a class="btn btn--gold btn--sm" href="index.html#contact">Επικοινωνήστε</a>
       </nav>
-
-      <div class="header-right">
-        <a class="lang-toggle" href="../gaia-wines.html" aria-label="Switch to English" hreflang="en">EN</a>
-        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
     </div>
   </header>
 
-  <main>
+  <main id="top">
+
     <!-- ===== ΕΠΙΚΕΦΑΛΙΔΑ ΕΤΑΙΡΕΙΑΣ ===== -->
-    <section class="subhero">
+    <section class="hero holding-hero">
       <div class="container">
-        <a href="index.html#holdings" class="back-link">← Πίσω στις συμμετοχές</a>
-        <div class="subhero-inner">
-          <div class="company-emblem" aria-hidden="true">GW</div>
-          <div>
-            <p class="eyebrow">Οινοποιία</p>
-            <h1>Gaia Wines</h1>
-            <p class="lead">Αυτόχθονες ελληνικές ποικιλίες, από το 1994.</p>
+        <a class="back" href="index.html#holdings">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13 8H3M7 4L3 8l4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Πίσω στις συμμετοχές
+        </a>
+        <div class="grid">
+          <div class="col-8 stack" style="gap:24px">
+            <div style="display:flex;align-items:center;gap:20px">
+              <span class="monogram monogram--logo monogram--lg" aria-hidden="true"><img src="../images/gaia-ammonite.svg" alt=""></span>
+              <span class="eyebrow">Οινοποιία · Σαντορίνη &amp; Νεμέα</span>
+            </div>
+            <h1 class="display">Gaia Wines</h1>
+            <p class="tagline">Αυτόχθονες ελληνικές ποικιλίες, από το 1994.</p>
           </div>
+          <div class="cta">
+            <a class="btn btn--gold" href="https://gaiawines.gr/" target="_blank" rel="noopener">Επίσκεψη ιστοσελίδας
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12L12 4M6 4h6v6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="facts facts--4">
+        <div class="container">
+          <div class="fact"><span class="fact__num">1994</span><span class="fact__label">Ίδρυση</span></div>
+          <div class="fact"><span class="fact__num">2</span><span class="fact__label">Οινοποιεία — Σαντορίνη, Νεμέα</span></div>
+          <div class="fact"><span class="fact__num">25+</span><span class="fact__label">Χώρες εξαγωγών</span></div>
+          <div class="fact"><span class="fact__num">2</span><span class="fact__label">Χαρακτηριστικές ποικιλίες — Ασύρτικο, Αγιωργίτικο</span></div>
         </div>
       </div>
     </section>
 
-    <!-- ===== ΣΤΙΓΜΙΟΤΥΠΟ ΙΣΤΟΣΕΛΙΔΑΣ ===== -->
-    <section class="section preview-wrap">
-      <div class="container">
-        <figure class="site-preview">
-          <a href="https://gaiawines.gr/en/" target="_blank" rel="noopener">
-            <img src="../images/gaia-wines.jpg" alt="Στιγμιότυπο της ιστοσελίδας gaiawines.gr">
+    <!-- ===== ΦΩΤΟΓΡΑΦΙΕΣ ===== -->
+    <section>
+      <div class="container photo-band">
+        <figure class="site-preview wide">
+          <a href="https://gaiawines.gr/" target="_blank" rel="noopener">
+            <img src="../images/gaia-wines-el.jpg" alt="Στιγμιότυπο της ιστοσελίδας gaiawines.gr">
           </a>
           <figcaption>Στιγμιότυπο από την επίσημη ιστοσελίδα</figcaption>
+        </figure>
+        <figure class="site-preview narrow">
+          <img src="../images/gaia-nemea-winery.jpg" alt="Το οινοποιείο της Γαίας στο Κουτσί Νεμέας, μέσα στους αμπελώνες" loading="lazy">
         </figure>
       </div>
     </section>
 
     <!-- ===== ΠΕΡΙΕΧΟΜΕΝΟ ===== -->
-    <section class="section">
-      <div class="container company-layout">
-        <div class="company-about">
-          <p class="section-label">Η εταιρεία</p>
-          <p>
-            Η Gaia Wines ιδρύθηκε το 1994 από τον οινολόγο Γιάννη
-            Παρασκευόπουλο και τον γεωπόνο Λέοντα Καρατσαλό, με στόχο να
-            αναδείξει τις ελληνικές αυτόχθονες ποικιλίες σε όλο τον κόσμο.
-          </p>
-          <p>
-            Λειτουργεί δύο οινοποιεία — στη Σαντορίνη, πατρίδα του Ασύρτικου,
-            και στο Κουτσί Νεμέας, γη του Αγιωργίτικου. Κρασιά όπως το
-            Θαλασσίτης και το Gaia Estate εξάγονται σε 25+ χώρες.
-          </p>
+    <section class="section" style="padding-top:96px">
+      <div class="container grid" style="row-gap:56px">
+        <div class="col-7 stack" style="gap:28px">
+          <p class="eyebrow">Η εταιρεία</p>
+          <h2 class="h2" style="font-size:48px">Οι ελληνικές αυτόχθονες ποικιλίες στον κόσμο.</h2>
+          <div class="stack body-lg" style="font-size:18px">
+            <p>Η Gaia Wines ιδρύθηκε το 1994 από τον οινολόγο Γιάννη Παρασκευόπουλο και τον γεωπόνο Παντελή Καρατσαλό, με στόχο να αναδείξει τις ελληνικές αυτόχθονες ποικιλίες σε όλο τον κόσμο.</p>
+            <p>Λειτουργεί δύο οινοποιεία — στη Σαντορίνη, πατρίδα του Ασύρτικου, και στο Κουτσί Νεμέας, γη του Αγιωργίτικου. Κρασιά όπως το Θαλασσίτης και το Gaia Estate εξάγονται σε 25+ χώρες.</p>
+          </div>
+          <div class="regions">
+            <div class="region"><span class="region__name">Σαντορίνη</span><span class="region__desc">Ασύρτικο · Θαλασσίτης</span></div>
+            <div class="region"><span class="region__name">Νεμέα</span><span class="region__desc">Αγιωργίτικο · Κουτσί, Κορινθία · Gaia Estate</span></div>
+          </div>
         </div>
-
-        <aside class="company-info">
-          <p class="section-label">Στοιχεία επικοινωνίας</p>
-          <ul class="info-list">
-            <li>
-              <span>Ιστοσελίδα</span>
-              <a href="https://gaiawines.gr" target="_blank" rel="noopener">gaiawines.gr</a>
-            </li>
-            <li>
-              <span>Οινοποιείο Σαντορίνης</span>
-              <span>Σαντορίνη, Κυκλάδες</span>
-              <a href="https://maps.google.com/?cid=13102650163668516286" target="_blank" rel="noopener" class="map-link">Δείτε στον χάρτη →</a>
-            </li>
-            <li>
-              <span>Οινοποιείο Νεμέας</span>
-              <span>Κουτσί, Νεμέα, Κορινθία</span>
-              <a href="https://maps.google.com/?cid=11465673654103496916" target="_blank" rel="noopener" class="map-link">Δείτε στον χάρτη →</a>
-            </li>
-          </ul>
-          <a href="https://gaiawines.gr/en/" target="_blank" rel="noopener" class="btn btn-primary">Επίσκεψη ιστοσελίδας →</a>
+        <aside class="details offset-9">
+          <p class="details__title">Στοιχεία επικοινωνίας</p>
+          <div class="row"><span>Κλάδος</span><span>Οινοποιία</span></div>
+          <div class="row"><span>Ίδρυση</span><span>1994</span></div>
+          <div class="row"><span>Ιδρυτές</span><span>Γ. Παρασκευόπουλος<br>Π. Καρατσαλός</span></div>
+          <div class="row"><span>Ιστοσελίδα</span><a href="https://gaiawines.gr" target="_blank" rel="noopener">gaiawines.gr</a></div>
+          <div class="row"><span>Οινοποιείο Σαντορίνης</span>
+            <span class="row__addr"><span>Σαντορίνη, Κυκλάδες</span><a href="https://maps.google.com/?cid=13102650163668516286" target="_blank" rel="noopener" class="map-link">Δείτε στον χάρτη →</a></span>
+          </div>
+          <div class="row"><span>Οινοποιείο Νεμέας</span>
+            <span class="row__addr"><span>Κουτσί, Νεμέα, Κορινθία</span><a href="https://maps.google.com/?cid=11465673654103496916" target="_blank" rel="noopener" class="map-link">Δείτε στον χάρτη →</a></span>
+          </div>
+          <a class="btn btn--gold" href="https://gaiawines.gr/" target="_blank" rel="noopener">Επίσκεψη ιστοσελίδας →</a>
         </aside>
       </div>
     </section>
+
+    <!-- ===== ΑΛΛΕΣ ΕΤΑΙΡΕΙΕΣ ΤΟΥ ΟΜΙΛΟΥ ===== -->
+    <section class="section section--sand" style="padding-block:96px">
+      <div class="container stack" style="gap:40px">
+        <div class="more-head">
+          <h2 class="h2" style="font-size:40px">Περισσότερα από τον όμιλο</h2>
+          <a class="more" href="index.html#holdings">Όλες οι συμμετοχές <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="cards cards--3">
+          <a class="card card--compact" href="house-of-wine.html"><span class="card__sector">Οίνος &amp; Αποστάγματα</span><h3>House of Wine</h3><p class="body">Μία από τις μεγαλύτερες online κάβες της Ελλάδας, με 1.000+ ετικέτες κρασιού και αποσταγμάτων.</p></a>
+          <a class="card card--compact" href="loukoumades-aigaion.html"><span class="card__sector">Εστίαση</span><h3>Λουκουμάδες Αιγαίον</h3><p class="body">Ιστορικό κατάστημα λουκουμάδων στην Αθήνα, από το 1926.</p></a>
+          <a class="card card--compact" href="cimolus.html"><span class="card__sector">Διαχείριση Ακίνητης Περιουσίας</span><h3>Cimolus</h3><p class="body">Εταιρεία διαχείρισης και αξιοποίησης ακίνητης περιουσίας.</p></a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <!-- ===== ΥΠΟΣΕΛΙΔΟ ===== -->
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <span class="brand-name">FOREST<span class="brand-thin"> HOLDING</span></span>
-      <div class="footer-meta">
-        <p class="footer-legal">FOREST HOLDING A.E. · Δελφών 30, Νέο Ηράκλειο 141 22</p>
-        <p>© <span id="year"></span> FOREST HOLDING A.E. — Με επιφύλαξη κάθε δικαιώματος. · <a href="privacy.html">Πολιτική Απορρήτου</a></p>
+    <div class="container">
+      <div class="stack" style="gap:10px">
+        <span class="wordmark">Forest Holding</span>
+        <span class="addr footer-legal">Forest Holding A.E. · Δελφών 30, Νέο Ηράκλειο 141 22</span>
+      </div>
+      <div class="links">
+        <a href="privacy.html">Πολιτική Απορρήτου</a>
+        <a href="../gaia-wines.html" hreflang="en" lang="en">English</a>
+        <span>© <span id="year"></span> Forest Holding A.E. — Με επιφύλαξη κάθε δικαιώματος.</span>
       </div>
     </div>
   </footer>

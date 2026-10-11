@@ -59,109 +59,131 @@
   }
   </script>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Instrument+Sans:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 
-  <!-- ===== ΚΕΦΑΛΙΔΑ ===== -->
-  <header class="site-header" id="top">
-    <div class="container header-inner">
-      <a href="index.html" class="brand" aria-label="FOREST HOLDING — Investment Group">
-        <img src="../images/FH_horizontal_green_bg_3200w.png" alt="FOREST HOLDING — Investment Group" class="brand-logo">
+  <!-- ===== ΚΕΦΑΛΙΔΑ / ΠΛΟΗΓΗΣΗ ===== -->
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html" aria-label="Forest Holding — Investment Group">
+        <img src="../images/FH_horizontal_green_bg_3200w.png" alt="Forest Holding — Investment Group">
       </a>
-
-      <nav class="site-nav" aria-label="Κύρια πλοήγηση">
-        <ul>
-          <li><a href="index.html#hero">Αρχική</a></li>
-          <li><a href="index.html#about">Σχετικά με εμάς</a></li>
-          <li><a href="index.html#holdings">Συμμετοχές</a></li>
-          <li><a href="index.html#contact">Επικοινωνία</a></li>
-        </ul>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Άνοιγμα μενού">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+      <nav class="nav" id="nav" aria-label="Κύρια πλοήγηση">
+        <a href="index.html#about">Σχετικά με εμάς</a>
+        <a href="index.html#philosophy">Φιλοσοφία</a>
+        <a href="index.html#holdings" aria-current="page">Συμμετοχές</a>
+        <a href="index.html#contact">Επικοινωνία</a>
+        <!-- Διακόπτης γλώσσας: δείχνει την ΑΛΛΗ γλώσσα -->
+        <a class="lang" href="../loukoumades-aigaion.html" hreflang="en" lang="en" aria-label="Switch to English">En</a>
+        <a class="btn btn--gold btn--sm" href="index.html#contact">Επικοινωνήστε</a>
       </nav>
-
-      <div class="header-right">
-        <a class="lang-toggle" href="../loukoumades-aigaion.html" aria-label="Switch to English" hreflang="en">EN</a>
-        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
     </div>
   </header>
 
-  <main>
+  <main id="top">
+
     <!-- ===== ΕΠΙΚΕΦΑΛΙΔΑ ΕΤΑΙΡΕΙΑΣ ===== -->
-    <section class="subhero">
+    <section class="hero holding-hero">
       <div class="container">
-        <a href="index.html#holdings" class="back-link">← Πίσω στις συμμετοχές</a>
-        <div class="subhero-inner">
-          <div class="company-emblem" aria-hidden="true">ΛΑ</div>
-          <div>
-            <p class="eyebrow">Εστίαση</p>
-            <h1>Λουκουμάδες Αιγαίον</h1>
-            <p class="lead">Λουκουμάδες στην καρδιά της Αθήνας, από το 1926.</p>
+        <a class="back" href="index.html#holdings">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13 8H3M7 4L3 8l4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Πίσω στις συμμετοχές
+        </a>
+        <div class="grid">
+          <div class="col-8 stack" style="gap:24px">
+            <div style="display:flex;align-items:center;gap:20px">
+              <span class="monogram monogram--logo monogram--lg" aria-hidden="true"><img src="../images/aigaion-mark.png" alt=""></span>
+              <span class="eyebrow">Εστίαση · Αθήνα</span>
+            </div>
+            <h1 class="display">Λουκουμάδες Αιγαίον</h1>
+            <p class="tagline">Λουκουμάδες στην καρδιά της Αθήνας, από το 1926.</p>
           </div>
+          <div class="cta">
+            <a class="btn btn--gold" href="https://www.loukoumades-aigaion.gr/" target="_blank" rel="noopener">Επίσκεψη ιστοσελίδας
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12L12 4M6 4h6v6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="facts facts--2">
+        <div class="container">
+          <div class="fact"><span class="fact__num">1926</span><span class="fact__label">Λουκουμάδες από το</span></div>
+          <div class="fact"><span class="fact__num">Αθήνα</span><span class="fact__label">Ιστορικό κέντρο — οδός Σταδίου</span></div>
         </div>
       </div>
     </section>
 
-    <!-- ===== ΣΤΙΓΜΙΟΤΥΠΟ ΙΣΤΟΣΕΛΙΔΑΣ ===== -->
-    <section class="section preview-wrap">
-      <div class="container">
-        <figure class="site-preview">
+    <!-- ===== ΦΩΤΟΓΡΑΦΙΕΣ ===== -->
+    <section>
+      <div class="container photo-band">
+        <figure class="site-preview full">
           <a href="https://www.loukoumades-aigaion.gr/" target="_blank" rel="noopener">
-            <img src="../images/loukoumades-aigaion.jpg" alt="Στιγμιότυπο της ιστοσελίδας loukoumades-aigaion.gr">
+            <img src="../images/aigaion-brand.jpg" alt="Λουκουμάδες Αιγαίον — από το 1926">
           </a>
-          <figcaption>Στιγμιότυπο από την επίσημη ιστοσελίδα</figcaption>
+          <figcaption>Από την επίσημη ιστοσελίδα</figcaption>
         </figure>
       </div>
     </section>
 
     <!-- ===== ΠΕΡΙΕΧΟΜΕΝΟ ===== -->
-    <section class="section">
-      <div class="container company-layout">
-        <div class="company-about">
-          <p class="section-label">Η εταιρεία</p>
-          <p>
-            Οι «Λουκουμάδες Αιγαίον» είναι ιστορικό κατάστημα της Αθήνας που
-            σερβίρει λουκουμάδες από το 1926, στο ιστορικό κέντρο της πόλης.
-          </p>
-          <p>
-            Με ρίζες σχεδόν έναν αιώνα και σεβασμό στην παράδοση, η επιχείρηση
-            ανανεώνεται και επιστρέφει με σύγχρονη ματιά, κρατώντας την
-            αυθεντική της γεύση.
-          </p>
+    <section class="section" style="padding-top:96px">
+      <div class="container grid" style="row-gap:56px">
+        <div class="col-7 stack" style="gap:28px">
+          <p class="eyebrow">Η εταιρεία</p>
+          <h2 class="h2" style="font-size:48px">Ένα ιστορικό κατάστημα της Αθήνας, ανανεωμένο.</h2>
+          <div class="stack body-lg" style="font-size:18px">
+            <p>Οι «Λουκουμάδες Αιγαίον» είναι ιστορικό κατάστημα της Αθήνας που σερβίρει λουκουμάδες από το 1926, στο ιστορικό κέντρο της πόλης.</p>
+            <p>Με ρίζες σχεδόν έναν αιώνα και σεβασμό στην παράδοση, η επιχείρηση ανανεώνεται και επιστρέφει με σύγχρονη ματιά, κρατώντας την αυθεντική της γεύση.</p>
+          </div>
         </div>
-
-        <aside class="company-info">
-          <p class="section-label">Στοιχεία επικοινωνίας</p>
-          <ul class="info-list">
-            <li>
-              <span>Ιστοσελίδα</span>
-              <a href="https://www.loukoumades-aigaion.gr" target="_blank" rel="noopener">loukoumades-aigaion.gr</a>
-            </li>
-            <li>
-              <span>Email</span>
-              <a href="mailto:info@loukoumades-aigaion.gr">info@loukoumades-aigaion.gr</a>
-            </li>
-            <li>
-              <span>Διεύθυνση</span>
-              <span>Σταδίου 44-46 (Στοά Αρσακείου)<br>105 64 Αθήνα</span>
-              <a href="https://maps.google.com/?cid=8360108386346340916" target="_blank" rel="noopener" class="map-link">Δείτε στον χάρτη →</a>
-            </li>
-          </ul>
-          <a href="https://www.loukoumades-aigaion.gr/" target="_blank" rel="noopener" class="btn btn-primary">Επίσκεψη ιστοσελίδας →</a>
+        <aside class="details offset-9">
+          <p class="details__title">Στοιχεία επικοινωνίας</p>
+          <div class="row"><span>Κλάδος</span><span>Εστίαση</span></div>
+          <div class="row"><span>Ιστοσελίδα</span><a href="https://www.loukoumades-aigaion.gr" target="_blank" rel="noopener">loukoumades-aigaion.gr</a></div>
+          <div class="row"><span>Email</span><a href="mailto:info@loukoumades-aigaion.gr">info@loukoumades-aigaion.gr</a></div>
+          <div class="row"><span>Διεύθυνση</span>
+            <span class="row__addr"><span>Σταδίου 44-46 (Στοά Αρσακείου)<br>105 64 Αθήνα</span><a href="https://maps.google.com/?cid=8360108386346340916" target="_blank" rel="noopener" class="map-link">Δείτε στον χάρτη →</a></span>
+          </div>
+          <a class="btn btn--gold" href="https://www.loukoumades-aigaion.gr/" target="_blank" rel="noopener">Επίσκεψη ιστοσελίδας →</a>
         </aside>
       </div>
     </section>
+
+    <!-- ===== ΑΛΛΕΣ ΕΤΑΙΡΕΙΕΣ ΤΟΥ ΟΜΙΛΟΥ ===== -->
+    <section class="section section--sand" style="padding-block:96px">
+      <div class="container stack" style="gap:40px">
+        <div class="more-head">
+          <h2 class="h2" style="font-size:40px">Περισσότερα από τον όμιλο</h2>
+          <a class="more" href="index.html#holdings">Όλες οι συμμετοχές <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="cards cards--3">
+          <a class="card card--compact" href="house-of-wine.html"><span class="card__sector">Οίνος &amp; Αποστάγματα</span><h3>House of Wine</h3><p class="body">Μία από τις μεγαλύτερες online κάβες της Ελλάδας, με 1.000+ ετικέτες κρασιού και αποσταγμάτων.</p></a>
+          <a class="card card--compact" href="gaia-wines.html"><span class="card__sector">Οινοποιία</span><h3>Gaia Wines</h3><p class="body">Οινοποιείο με αυτόχθονες ελληνικές ποικιλίες σε Σαντορίνη και Νεμέα, με εξαγωγές σε 25+ χώρες.</p></a>
+          <a class="card card--compact" href="cimolus.html"><span class="card__sector">Διαχείριση Ακίνητης Περιουσίας</span><h3>Cimolus</h3><p class="body">Εταιρεία διαχείρισης και αξιοποίησης ακίνητης περιουσίας.</p></a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <!-- ===== ΥΠΟΣΕΛΙΔΟ ===== -->
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <span class="brand-name">FOREST<span class="brand-thin"> HOLDING</span></span>
-      <div class="footer-meta">
-        <p class="footer-legal">FOREST HOLDING A.E. · Δελφών 30, Νέο Ηράκλειο 141 22</p>
-        <p>© <span id="year"></span> FOREST HOLDING A.E. — Με επιφύλαξη κάθε δικαιώματος. · <a href="privacy.html">Πολιτική Απορρήτου</a></p>
+    <div class="container">
+      <div class="stack" style="gap:10px">
+        <span class="wordmark">Forest Holding</span>
+        <span class="addr footer-legal">Forest Holding A.E. · Δελφών 30, Νέο Ηράκλειο 141 22</span>
+      </div>
+      <div class="links">
+        <a href="privacy.html">Πολιτική Απορρήτου</a>
+        <a href="../loukoumades-aigaion.html" hreflang="en" lang="en">English</a>
+        <span>© <span id="year"></span> Forest Holding A.E. — Με επιφύλαξη κάθε δικαιώματος.</span>
       </div>
     </div>
   </footer>

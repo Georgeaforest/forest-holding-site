@@ -1,6 +1,6 @@
 /* =========================================================
    FOREST HOLDING A.E. — Συμπεριφορά σελίδας (JavaScript)
-   Το περιεχόμενο είναι στατικό ανά γλώσσα (EL: root, EN: /en/).
+   Το περιεχόμενο είναι στατικό ανά γλώσσα (EN: root, EL: /el/).
    Ο διακόπτης γλώσσας είναι σύνδεσμος προς την αντίστοιχη σελίδα.
    ========================================================= */
 
@@ -14,17 +14,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
   /* ----- 2. Μενού για κινητά (hamburger) ----- */
   var toggle = document.querySelector(".nav-toggle");
-  var nav = document.querySelector(".site-nav");
+  var nav = document.querySelector(".nav");
 
   if (toggle && nav) {
     toggle.addEventListener("click", function () {
-      var isOpen = nav.classList.toggle("open");
+      var isOpen = nav.classList.toggle("is-open");
       toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
     });
 
     nav.querySelectorAll("a").forEach(function (link) {
       link.addEventListener("click", function () {
-        nav.classList.remove("open");
+        nav.classList.remove("is-open");
         toggle.setAttribute("aria-expanded", "false");
       });
     });
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   /* ----- 3. Ενεργός σύνδεσμος ανάλογα με την ενότητα στην οθόνη ----- */
   var sections = document.querySelectorAll("main section[id]");
-  var navLinks = document.querySelectorAll('.site-nav a[href^="#"]');
+  var navLinks = document.querySelectorAll('.nav a[href^="#"]');
 
   if ("IntersectionObserver" in window && sections.length) {
     var observer = new IntersectionObserver(function (entries) {

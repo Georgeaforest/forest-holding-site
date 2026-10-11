@@ -54,142 +54,146 @@
   }
   </script>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Instrument+Sans:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 
   <!-- ===== ΚΕΦΑΛΙΔΑ / ΠΛΟΗΓΗΣΗ ===== -->
-  <header class="site-header" id="top">
-    <div class="container header-inner">
-      <a href="#top" class="brand" aria-label="FOREST HOLDING — Investment Group">
-        <img src="../images/FH_horizontal_green_bg_3200w.png" alt="FOREST HOLDING — Investment Group" class="brand-logo">
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="#top" aria-label="Forest Holding — Investment Group">
+        <img src="../images/FH_horizontal_green_bg_3200w.png" alt="Forest Holding — Investment Group">
       </a>
-
-      <nav class="site-nav" aria-label="Κύρια πλοήγηση">
-        <ul>
-          <li><a href="#hero">Αρχική</a></li>
-          <li><a href="#about">Σχετικά με εμάς</a></li>
-          <li><a href="#holdings">Συμμετοχές</a></li>
-          <li><a href="#contact">Επικοινωνία</a></li>
-        </ul>
-      </nav>
-
-      <div class="header-right">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Άνοιγμα μενού">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+      <nav class="nav" id="nav" aria-label="Κύρια πλοήγηση">
+        <a href="#about">Σχετικά με εμάς</a>
+        <a href="#philosophy">Φιλοσοφία</a>
+        <a href="#holdings">Συμμετοχές</a>
+        <a href="#contact">Επικοινωνία</a>
         <!-- Διακόπτης γλώσσας: δείχνει την ΑΛΛΗ γλώσσα -->
-        <a class="lang-toggle" href="../index.html" aria-label="Switch to English" hreflang="en">EN</a>
-
-        <!-- Κουμπί για κινητά (hamburger) -->
-        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
+        <a class="lang" href="../index.html" hreflang="en" lang="en" aria-label="Switch to English">En</a>
+        <a class="btn btn--gold btn--sm" href="#contact">Επικοινωνήστε</a>
+      </nav>
     </div>
   </header>
 
-  <main>
+  <main id="top">
 
     <!-- ===== ΑΡΧΙΚΗ (HERO) ===== -->
     <section class="hero" id="hero">
-      <div class="container hero-inner">
-        <p class="eyebrow">Εταιρεία Συμμετοχών · Est. 2021</p>
-        <h1>Επενδύουμε στην ανάπτυξη<br>και τον εκσυγχρονισμό των επιχειρήσεων.</h1>
-        <p class="lead">
-          Η FOREST HOLDING επενδύει σε υγιείς επιχειρήσεις και στηρίζει
-          ενεργά την ανάπτυξη και τον εκσυγχρονισμό τους, δημιουργώντας βιώσιμη
-          αξία με μακροπρόθεσμη προοπτική.
-        </p>
-        <div class="hero-actions">
-          <a href="#holdings" class="btn btn-primary">Οι συμμετοχές μας</a>
-          <a href="#contact" class="btn btn-ghost">Επικοινωνήστε</a>
+      <div class="container grid">
+        <div class="col-8 stack stack--lg">
+          <p class="eyebrow eyebrow--line">Εταιρεία Συμμετοχών · Est. 2021</p>
+          <h1 class="display">Επενδύουμε στην ανάπτυξη και τον εκσυγχρονισμό των επιχειρήσεων.</h1>
+          <p class="lead">Η Forest Holding επενδύει σε υγιείς επιχειρήσεις και στηρίζει ενεργά την ανάπτυξη και τον εκσυγχρονισμό τους, δημιουργώντας βιώσιμη αξία με μακροπρόθεσμη προοπτική.</p>
+          <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:8px">
+            <a class="btn btn--gold" href="#holdings">Οι συμμετοχές μας
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a class="btn btn--ghost" href="#contact">Επικοινωνήστε</a>
+          </div>
+        </div>
+      </div>
+      <div class="facts facts--4">
+        <div class="container">
+          <div class="fact"><span class="fact__num">2021</span><span class="fact__label">Ίδρυση</span></div>
+          <div class="fact"><span class="fact__num">4</span><span class="fact__label">Εταιρείες στο χαρτοφυλάκιο</span></div>
+          <div class="fact"><span class="fact__num">3</span><span class="fact__label">Κλάδοι — κρασί, εστίαση, ακίνητα</span></div>
+          <div class="fact"><span class="fact__num">1926</span><span class="fact__label">Το παλαιότερο σήμα του ομίλου</span></div>
         </div>
       </div>
     </section>
 
     <!-- ===== ΣΧΕΤΙΚΑ ΜΕ ΕΜΑΣ ===== -->
     <section class="section" id="about">
-      <div class="container">
-        <p class="section-label">01 — Σχετικά με εμάς</p>
-        <div class="about-grid">
-          <div>
-            <h2>Ένας όμιλος με μακροπρόθεσμη προσέγγιση.</h2>
-          </div>
-          <div class="about-text">
-            <p>
-              Η FOREST HOLDING είναι ελληνική εταιρεία συμμετοχών που
-              διαχειρίζεται ένα διαφοροποιημένο χαρτοφυλάκιο επιχειρήσεων σε
-              στρατηγικούς κλάδους της οικονομίας. Στόχος μας είναι η δημιουργία
-              βιώσιμης αξίας για τους μετόχους, τους εργαζομένους και τις τοπικές
-              κοινωνίες.
-            </p>
-            <p>
-              Με έμφαση στη διαφάνεια, την εταιρική διακυβέρνηση και τη
-              μακροπρόθεσμη σταθερότητα, στηρίζουμε τις εταιρείες του ομίλου
-              ώστε να αναπτύσσονται με υπευθυνότητα και συνέπεια.
-            </p>
+      <div class="container grid">
+        <div class="col-4 stack">
+          <p class="eyebrow">01 — Σχετικά με εμάς</p>
+          <h2 class="h2">Ένας όμιλος με μακροπρόθεσμη προσέγγιση.</h2>
+        </div>
+        <div class="offset-6 stack body-lg" style="gap:24px">
+          <p>Η Forest Holding είναι ελληνική εταιρεία συμμετοχών που διαχειρίζεται ένα διαφοροποιημένο χαρτοφυλάκιο επιχειρήσεων σε στρατηγικούς κλάδους της οικονομίας. Στόχος μας είναι η δημιουργία βιώσιμης αξίας για τους μετόχους, τους εργαζομένους και τις τοπικές κοινωνίες.</p>
+          <p>Με έμφαση στη διαφάνεια, την εταιρική διακυβέρνηση και τη μακροπρόθεσμη σταθερότητα, στηρίζουμε τις εταιρείες του ομίλου ώστε να αναπτύσσονται με υπευθυνότητα και συνέπεια.</p>
+        </div>
+        <div class="col-12 values">
+          <div class="value"><span class="value__num">01</span><h3 class="h3">Διάρκεια</h3><p class="body">Επενδύουμε με ορίζοντα δεκαετιών, όχι τριμήνων.</p></div>
+          <div class="value"><span class="value__num">02</span><h3 class="h3">Διαφάνεια</h3><p class="body">Σαφείς διαδικασίες και υπεύθυνη εταιρική διακυβέρνηση.</p></div>
+          <div class="value"><span class="value__num">03</span><h3 class="h3">Συνεργασία</h3><p class="body">Στηρίζουμε τις ομάδες, δεν τις αντικαθιστούμε.</p></div>
+        </div>
+      </div>
+    </section>
 
-            <ul class="value-list">
-              <li>
-                <h3>Διάρκεια</h3>
-                <p>Επενδύουμε με ορίζοντα δεκαετιών, όχι τριμήνων.</p>
-              </li>
-              <li>
-                <h3>Διαφάνεια</h3>
-                <p>Σαφείς διαδικασίες και υπεύθυνη εταιρική διακυβέρνηση.</p>
-              </li>
-              <li>
-                <h3>Συνεργασία</h3>
-                <p>Στηρίζουμε τις ομάδες, δεν τις αντικαθιστούμε.</p>
-              </li>
-            </ul>
-          </div>
+    <!-- ===== ΦΙΛΟΣΟΦΙΑ ===== -->
+    <section class="section section--sand" id="philosophy">
+      <div class="container grid" style="row-gap:56px">
+        <div class="col-5 stack">
+          <p class="eyebrow">02 — Η φιλοσοφία μας</p>
+          <h2 class="h2">Υπομονετικό κεφάλαιο, όπως ένα δάσος.</h2>
+          <p class="body-lg" style="font-size:18px">Ένα δάσος δεν χτίζεται· μεγαλώνει. Ανταμείβει όσους φυτεύουν νωρίς, το φροντίζουν με συνέπεια και δεν βιάζονται να μαζέψουν τους καρπούς. Έτσι βλέπουμε και τις εταιρείες στις οποίες επενδύουμε.</p>
+        </div>
+        <div class="offset-7">
+          <blockquote class="quote">«Δεν κοιτάμε το επόμενο τρίμηνο. Αναζητούμε επιχειρήσεις με χαρακτήρα, ποιότητα και αυθεντική ελληνική ταυτότητα — και μένουμε.»</blockquote>
+        </div>
+        <div class="col-12 steps">
+          <div class="step"><span class="step__label">Επιλέγουμε</span><h3>Πρώτα οι υγιείς επιχειρήσεις</h3><p class="body">Γερά θεμέλια, δυνατές ομάδες και προϊόντα που ο κόσμος ήδη αγαπά. Επενδύουμε σε ό,τι δουλεύει και το βοηθάμε να δουλέψει καλύτερα.</p></div>
+          <div class="step"><span class="step__label">Στηρίζουμε</span><h3>Εκσυγχρονίζουμε, δεν αντικαθιστούμε</h3><p class="body">Διακυβέρνηση, συστήματα, ψηφιακά εργαλεία και κεφάλαια — δίπλα στους ανθρώπους που έχτισαν την επιχείρηση.</p></div>
+          <div class="step"><span class="step__label">Μένουμε</span><h3>Ορίζοντας δεκαετιών</h3><p class="body">Χωρίς χρονοδιάγραμμα εξόδου. Η αξία πολλαπλασιάζεται όταν η ιδιοκτησία είναι σταθερή και οι αποφάσεις παίρνονται με μακροπρόθεσμη ματιά.</p></div>
         </div>
       </div>
     </section>
 
     <!-- ===== ΣΥΜΜΕΤΟΧΕΣ ===== -->
-    <section class="section section-alt" id="holdings">
-      <div class="container">
-        <p class="section-label">02 — Συμμετοχές</p>
-        <h2>Το χαρτοφυλάκιό μας</h2>
-        <p class="section-intro">
-          Επιλεγμένες επενδύσεις σε εταιρείες με χαρακτήρα, ποιότητα και
-          αυθεντική ελληνική ταυτότητα.
-        </p>
-
+    <section class="section" id="holdings">
+      <div class="container stack" style="gap:64px">
+        <div class="holdings-head">
+          <div class="stack" style="max-width:640px">
+            <p class="eyebrow">03 — Συμμετοχές</p>
+            <h2 class="h2">Το χαρτοφυλάκιό μας</h2>
+            <p class="body-lg" style="font-size:18px">Επιλεγμένες επενδύσεις σε εταιρείες με χαρακτήρα, ποιότητα και αυθεντική ελληνική ταυτότητα.</p>
+          </div>
+          <p class="meta">Τέσσερις εταιρείες · Τρεις κλάδοι</p>
+        </div>
         <div class="cards">
           <a class="card" href="house-of-wine.html">
-            <span class="card-tag">Οίνος & Αποστάγματα</span>
-            <h3>House of Wine</h3>
-            <p>
-              Μία από τις μεγαλύτερες online κάβες της Ελλάδας, με 1.000+
-              ετικέτες κρασιού και αποσταγμάτων.
-            </p>
-            <span class="card-more">Μάθετε περισσότερα →</span>
+            <img class="card__media card__media--top" src="../images/house-of-wine.jpg" alt="Η online κάβα houseofwine.gr" loading="lazy">
+            <div class="card__body">
+              <div class="card__top"><span class="card__sector">Οίνος &amp; Αποστάγματα</span><span class="monogram monogram--logo" aria-hidden="true"><img src="../images/how-glass.png" alt=""></span></div>
+              <h3>House of Wine</h3>
+              <p class="body">Μία από τις μεγαλύτερες online κάβες της Ελλάδας, με 1.000+ ετικέτες κρασιού και αποσταγμάτων.</p>
+              <span class="more">Μάθετε περισσότερα <span aria-hidden="true">→</span></span>
+            </div>
           </a>
           <a class="card" href="gaia-wines.html">
-            <span class="card-tag">Οινοποιία</span>
-            <h3>Gaia Wines</h3>
-            <p>
-              Οινοποιείο με αυτόχθονες ελληνικές ποικιλίες σε Σαντορίνη και
-              Νεμέα, με εξαγωγές σε 25+ χώρες.
-            </p>
-            <span class="card-more">Μάθετε περισσότερα →</span>
+            <img class="card__media" src="../images/gaia-santorini-winery.jpg" alt="Το κελάρι του οινοποιείου της Γαίας στη Σαντορίνη" loading="lazy">
+            <div class="card__body">
+              <div class="card__top"><span class="card__sector">Οινοποιία</span><span class="monogram monogram--logo" aria-hidden="true"><img src="../images/gaia-ammonite.svg" alt=""></span></div>
+              <h3>Gaia Wines</h3>
+              <p class="body">Οινοποιείο με αυτόχθονες ελληνικές ποικιλίες σε Σαντορίνη και Νεμέα, με εξαγωγές σε 25+ χώρες.</p>
+              <span class="more">Μάθετε περισσότερα <span aria-hidden="true">→</span></span>
+            </div>
           </a>
           <a class="card" href="loukoumades-aigaion.html">
-            <span class="card-tag">Εστίαση</span>
-            <h3>Λουκουμάδες Αιγαίον</h3>
-            <p>
-              Ιστορικό κατάστημα λουκουμάδων στην Αθήνα, από το 1926.
-            </p>
-            <span class="card-more">Μάθετε περισσότερα →</span>
+            <img class="card__media" src="../images/aigaion-brand.jpg" alt="Λουκουμάδες Αιγαίον — από το 1926" loading="lazy">
+            <div class="card__body">
+              <div class="card__top"><span class="card__sector">Εστίαση</span><span class="monogram monogram--logo" aria-hidden="true"><img src="../images/aigaion-mark.png" alt=""></span></div>
+              <h3>Λουκουμάδες Αιγαίον</h3>
+              <p class="body">Ιστορικό κατάστημα λουκουμάδων στην Αθήνα, από το 1926.</p>
+              <span class="more">Μάθετε περισσότερα <span aria-hidden="true">→</span></span>
+            </div>
           </a>
           <a class="card" href="cimolus.html">
-            <span class="card-tag">Διαχείριση Ακίνητης Περιουσίας</span>
-            <h3>Cimolus</h3>
-            <p>
-              Εταιρεία διαχείρισης και αξιοποίησης ακίνητης περιουσίας.
-            </p>
-            <span class="card-more">Μάθετε περισσότερα →</span>
+            <div class="card__media card__media--logo"><img src="../images/cimolus-horizontal-light-800w.png" alt="Cimolus" loading="lazy"></div>
+            <div class="card__body">
+              <div class="card__top"><span class="card__sector">Διαχείριση Ακίνητης Περιουσίας</span><span class="monogram monogram--logo" aria-hidden="true"><img src="../images/cimolus-icon-only-dark-300w.png" alt=""></span></div>
+              <h3>Cimolus</h3>
+              <p class="body">Εταιρεία διαχείρισης και αξιοποίησης ακίνητης περιουσίας.</p>
+              <span class="more">Μάθετε περισσότερα <span aria-hidden="true">→</span></span>
+            </div>
           </a>
         </div>
       </div>
@@ -197,40 +201,34 @@
 
     <!-- ===== ΕΠΙΚΟΙΝΩΝΙΑ ===== -->
     <section class="section" id="contact">
-      <div class="container contact-grid">
-        <div>
-          <p class="section-label">03 — Επικοινωνία</p>
-          <h2>Μιλήστε με την ομάδα μας.</h2>
-          <p class="section-intro">
-            Για ερωτήματα σχετικά με τον όμιλο, τις συμμετοχές ή συνεργασίες,
-            επικοινωνήστε μαζί μας.
-          </p>
-
+      <div class="container grid" style="row-gap:48px">
+        <div class="col-5 stack" style="gap:24px">
+          <p class="eyebrow">04 — Επικοινωνία</p>
+          <h2 class="h2">Μιλήστε με την ομάδα μας.</h2>
+          <p class="body-lg" style="font-size:18px">Για ερωτήματα σχετικά με τον όμιλο, τις συμμετοχές ή συνεργασίες, επικοινωνήστε μαζί μας.</p>
+          <!-- Email/τηλέφωνο σκόπιμα ΔΕΝ εμφανίζονται — όλα μέσω της φόρμας -->
+          <div class="contact-details">
+            <div class="kv"><span class="kv__k">Έδρα</span><span class="kv__v">Δελφών 30, Νέο Ηράκλειο 141 22</span></div>
+          </div>
         </div>
 
         <!-- Φόρμα επικοινωνίας — αποστολή μέσω Web3Forms (στέλνει στο info@forestholding.gr) -->
-        <form class="contact-form" novalidate>
-          <!-- ΑΝΤΙΚΑΤΕΣΤΗΣΕ με το δικό σου access key από https://web3forms.com (δωρεάν) -->
+        <form class="form contact-form offset-7" novalidate>
           <input type="hidden" name="access_key" value="2d1455b8-f04c-4919-a3ee-ed4a234013b3">
           <input type="hidden" name="subject" value="Νέο μήνυμα από το forestholding.gr">
-          <input type="hidden" name="from_name" value="FOREST HOLDING — Ιστοσελίδα">
+          <input type="hidden" name="from_name" value="Forest Holding — Ιστοσελίδα">
           <!-- Honeypot κατά των bots: αν συμπληρωθεί, το μήνυμα απορρίπτεται -->
           <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
 
-          <div class="field">
-            <label for="name">Ονοματεπώνυμο</label>
-            <input type="text" id="name" name="name" placeholder="Το όνομά σας" required>
+          <div class="form__row">
+            <div class="field"><label for="name">Ονοματεπώνυμο</label><input type="text" id="name" name="name" placeholder="Το όνομά σας" autocomplete="name" required></div>
+            <div class="field"><label for="email">Email</label><input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required></div>
           </div>
-          <div class="field">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          <div class="field"><label for="message">Μήνυμα</label><textarea id="message" name="message" rows="6" placeholder="Το μήνυμά σας…" required></textarea></div>
+          <div class="form__foot">
+            <p class="form__note">Με την υποβολή, τα στοιχεία σας υποβάλλονται σε επεξεργασία σύμφωνα με την <a href="privacy.html">Πολιτική Απορρήτου</a>.</p>
+            <button class="btn btn--dark" type="submit">Αποστολή</button>
           </div>
-          <div class="field">
-            <label for="message">Μήνυμα</label>
-            <textarea id="message" name="message" rows="4" placeholder="Το μήνυμά σας…" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary">Αποστολή</button>
-          <p class="form-consent">Με την υποβολή, τα στοιχεία σας υποβάλλονται σε επεξεργασία σύμφωνα με την <a href="privacy.html">Πολιτική Απορρήτου</a>.</p>
           <p class="form-note" hidden>Ευχαριστούμε! Το μήνυμά σας εστάλη.</p>
           <p class="form-error" hidden>Κάτι πήγε στραβά. Δοκιμάστε ξανά αργότερα.</p>
         </form>
@@ -241,11 +239,15 @@
 
   <!-- ===== ΥΠΟΣΕΛΙΔΟ ===== -->
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <span class="brand-name">FOREST<span class="brand-thin"> HOLDING</span></span>
-      <div class="footer-meta">
-        <p class="footer-legal">FOREST HOLDING A.E. · Δελφών 30, Νέο Ηράκλειο 141 22</p>
-        <p>© <span id="year"></span> FOREST HOLDING A.E. — Με επιφύλαξη κάθε δικαιώματος. · <a href="privacy.html">Πολιτική Απορρήτου</a></p>
+    <div class="container">
+      <div class="stack" style="gap:10px">
+        <span class="wordmark">Forest Holding</span>
+        <span class="addr footer-legal">Forest Holding A.E. · Δελφών 30, Νέο Ηράκλειο 141 22</span>
+      </div>
+      <div class="links">
+        <a href="privacy.html">Πολιτική Απορρήτου</a>
+        <a href="../index.html" hreflang="en" lang="en">English</a>
+        <span>© <span id="year"></span> Forest Holding A.E. — Με επιφύλαξη κάθε δικαιώματος.</span>
       </div>
     </div>
   </footer>
